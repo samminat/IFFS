@@ -124,9 +124,9 @@ namespace CyberErp.Presentation.Iffs.Web.Controllers
             var hashtable = JsonConvert.DeserializeObject<Hashtable>(param);
             int headerId = 0, TypeId = 0;
             int.TryParse(hashtable["HeaderId"].ToString(), out headerId);
-            //int.TryParse(hashtable["TypeId"].ToString(), out TypeId);
-            //MaterialType materialType = TypeId == 1 ? MaterialType.Standard : MaterialType.CrateAndBox;
-            var filtered = _PackingMaterialSurvey.FindAllQueryable(p => p.SurveyId.Equals(headerId));
+            string materialType = hashtable["MaterialType"].ToString();
+            MaterialType type = materialType == "CrateAndBox" ? MaterialType.CrateAndBox : MaterialType.Standard;//materialType == "CrateAndBox" ? MaterialType.Standard :
+            var filtered = _PackingMaterialSurvey.FindAllQueryable(p => p.SurveyId.Equals(headerId) & p.iffsPackingMaterialList.MaterialType == type);
 
             var count = filtered.Count();
             filtered = filtered.OrderBy(o => o.iffsPackingMaterialList.Name).Skip(start).Take(limit);

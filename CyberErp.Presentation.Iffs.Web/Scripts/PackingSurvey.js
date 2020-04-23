@@ -318,7 +318,14 @@ Ext.extend(Ext.erp.iffs.ux.PackingSurvey.Panel, Ext.Panel, {
         var grid = Ext.getCmp('PackingSurvey-grid');
         if (grid.getSelectionModel().hasSelection()) {
             var id = grid.getSelectionModel().getSelected().get('Id');
-            new Ext.erp.iffs.ux.PackingMaterialSurvey.Window({ HeaderId: id }).show();
+            new Ext.erp.iffs.ux.PackingMaterialSurvey.Window({ HeaderId: id, MaterialType: 'Standard' }).show();
+        }
+    },
+    onCrateAndBoxClick: function () {
+        var grid = Ext.getCmp('PackingSurvey-grid');
+        if (grid.getSelectionModel().hasSelection()) {
+            var id = grid.getSelectionModel().getSelected().get('Id');
+            new Ext.erp.iffs.ux.PackingMaterialSurvey.Window({ HeaderId: id, MaterialType: 'CrateAndBox' }).show();
         }
     },
     afterRender: function () {

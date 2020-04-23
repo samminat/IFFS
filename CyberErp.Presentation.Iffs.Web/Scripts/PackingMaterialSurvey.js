@@ -152,10 +152,10 @@ Ext.extend(Ext.erp.iffs.ux.PackingMaterialSurvey.Grid, Ext.grid.EditorGridPanel,
         }],
         Ext.erp.iffs.ux.PackingMaterialSurvey.Grid.superclass.initComponent.apply(this, arguments);
     },
-    loadDetail: function (headerId) {
+    loadDetail: function (headerId, materialType) {
         var Store = this.getStore();
 
-        Store.baseParams = { record: Ext.encode({ HeaderId: headerId }) };
+        Store.baseParams = { record: Ext.encode({ HeaderId: headerId, MaterialType: materialType }) };
         Store.load({
             params: { start: 0, limit: this.pageSize }
         });
@@ -250,7 +250,7 @@ Ext.erp.iffs.ux.PackingMaterialSurvey.Window = function (config) {
         listeners: {
             show: function () {
                 if (this.HeaderId > 0) {
-                    Ext.getCmp('PackingMaterialSurvey-grid').loadDetail(this.HeaderId);
+                    Ext.getCmp('PackingMaterialSurvey-grid').loadDetail(this.HeaderId, this.MaterialType);
                 }
             },
             scope: this
