@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8c8f1075fedb42fca4a4ef0c43ec5c5a" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="ErpModel.coreModule" Width="1.5" PointX="3" PointY="8.375" />
+        <EntityTypeShape EntityType="ErpModel.coreOperation" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="ErpModel.coreRole" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="ErpModel.coreRolePermission" Width="1.5" PointX="7.5" PointY="7.875" />
+        <EntityTypeShape EntityType="ErpModel.coreSubsystem" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="ErpModel.coreUser" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ErpModel.coreUserSubsystem" Width="1.5" PointX="3" PointY="4.375" />
+        <AssociationConnector Association="ErpModel.FK_coreModule_coreSubsystem" />
+        <AssociationConnector Association="ErpModel.FK_coreOperation_coreModule" />
+        <AssociationConnector Association="ErpModel.FK_coreRolePermission_coreOperation" />
+        <AssociationConnector Association="ErpModel.FK_coreRolePermission_coreRole" />
+        <AssociationConnector Association="ErpModel.FK_coreUserSubsystem_coreSubsystem" />
+        <AssociationConnector Association="ErpModel.FK_coreUserSubsystem_coreUser" />
+        <EntityTypeShape EntityType="ErpModel.hrmsEmployee" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="ErpModel.corePerson" Width="1.5" PointX="0.75" PointY="18.875" />
+        <AssociationConnector Association="ErpModel.FK_hrmsEmployee_corePerson" />
+        <EntityTypeShape EntityType="ErpModel.corePosition" Width="1.5" PointX="0.75" PointY="23.25" />
+        <EntityTypeShape EntityType="ErpModel.corePositionClass" Width="1.5" PointX="0.75" PointY="26.875" />
+        <AssociationConnector Association="ErpModel.FK_corePosition_corePositionClass" />
+        <AssociationConnector Association="ErpModel.FK_hrmsEmployee_corePosition" />
+        <EntityTypeShape EntityType="ErpModel.iffsApprover" Width="1.5" PointX="3" PointY="12.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsCustomer" Width="1.5" PointX="12.625" PointY="15.25" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderDetail" Width="1.5" PointX="17.125" PointY="11.375" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderQuotation" Width="1.5" PointX="20.125" PointY="13" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderTemplate" Width="1.5" PointX="14.875" PointY="7.25" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupCommodityType" Width="1.5" PointX="22.375" PointY="23.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupContainerType" Width="1.5" PointX="22.375" PointY="10.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupCurrency" Width="1.5" PointX="10.375" PointY="5.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupCustomerGroup" Width="1.5" PointX="10.375" PointY="11.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupOperationType" Width="1.5" PointX="12.625" PointY="5.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupPOE" Width="1.5" PointX="22.375" PointY="20.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupServiceUnitType" Width="2" PointX="10.375" PointY="1.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupSizeUnitType" Width="1.5" PointX="17.875" PointY="24.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupWeightUnitType" Width="1.5" PointX="17.875" PointY="21.875" />
+        <EntityTypeShape EntityType="ErpModel.iffsTermsAndConditionsTemplate" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsUserOperationTypeMapping" Width="1.5" PointX="14.875" PointY="3.5" />
+        <AssociationConnector Association="ErpModel.FK_iffsUserOperationTypeMapping_coreUser" />
+        <AssociationConnector Association="ErpModel.FK_iffsApprover_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsCustomer_iffsLupCustomerGroup" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderTemplate_iffsLupOperationType" />
+        <AssociationConnector Association="ErpModel.FK_iffsUserOperationTypeMapping_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupDocumentType" Width="1.5" PointX="15.625" PointY="0.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsNotification" Width="1.5" PointX="5.375" PointY="13.25" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperationDocumentTemplate" Width="1.5" PointX="17.875" PointY="4.625" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationDocumentTemplate_iffsLupDocumentType" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationDocumentTemplate_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderDocument" Width="1.5" PointX="20.875" PointY="4.5" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderDocument_iffsLupDocumentType" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupDataType" Width="1.5" PointX="5.25" PointY="22.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsRoleSetting" Width="1.5" PointX="7.5" PointY="20.125" />
+        <AssociationConnector Association="ErpModel.FK_ifmsRoleSetting_coreRole" />
+        <EntityTypeShape EntityType="ErpModel.iffsQuotationDetail" Width="1.5" PointX="25" PointY="10.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsQuotationTemplate" Width="1.5" PointX="15.25" PointY="12.375" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupCommodityType" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupContainerType" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupCurrency" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupOperationType" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationTemplate_iffsLupOperationType" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupPOE" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsLupServiceUnitType" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperationStatusTemplate" Width="1.5" PointX="17.875" PointY="14.75" />
+        <AssociationConnector Association="ErpModel.FK_ifmsOperationStatusTemplate_coreRole" />
+        <AssociationConnector Association="ErpModel.FK_ifmsOperationStatusTemplate_ifmsLupDataType" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationStatusTemplate_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsServiceRequestDocuments" Width="1.5" PointX="22.375" PointY="31.125" />
+        <EntityTypeShape EntityType="ErpModel.iffsDocumentNoSetting" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupExpenseType" Width="1.5" PointX="15.625" PointY="22.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperationExpenseTemplate" Width="1.875" PointX="17.875" PointY="1.5" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationExpenseTemplate_iffsLupExpenseType" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationExpenseTemplate_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderHistoryDetail" Width="1.5" PointX="27.125" PointY="20.375" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupLoadingPort" Width="1.5" PointX="0.75" PointY="31.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupPortOfDestination" Width="1.5" PointX="0.75" PointY="37.375" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupPortOfOrigin" Width="1.5" PointX="0.75" PointY="34.5" />
+        <EntityTypeShape EntityType="ErpModel.coreUserRole" Width="1.5" PointX="7.5" PointY="2.875" />
+        <AssociationConnector Association="ErpModel.FK_coreUserRole_coreRole" />
+        <AssociationConnector Association="ErpModel.FK_coreUserRole_coreUser" />
+        <EntityTypeShape EntityType="ErpModel.iffsServiceRequestDetail" Width="1.5" PointX="27.625" PointY="13.875" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequestDetail_iffsLupCommodityType" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequestDetail_iffsLupContainerType" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequestDetail_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperationExpense" Width="1.5" PointX="32.375" PointY="15.5" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderExpense_iffsLupCurrency" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderExpense_iffsLupExpenseType" />
+        <EntityTypeShape EntityType="ErpModel.iffsServiceRate" Width="1.5" PointX="20.875" PointY="0.75" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRate_iffsLupCurrency" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRate_iffsLupOperationType" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRate_iffsLupServiceUnitType" />
+        <EntityTypeShape EntityType="ErpModel.iffsService" Width="1.5" PointX="7.375" PointY="13" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsService" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationTemplate_iffsService" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRate_iffsService" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderHeader" Width="1.5" PointX="23.875" PointY="2.375" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHeader_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHeader_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderDetail_iffsJobOrderHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderDocument_iffsJobOrderHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHeader_iffsLupOperationType" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderQuotation_iffsJobOrderHeader" />
+        <EntityTypeShape EntityType="ErpModel.iffsJobOrderHistoryHeader" Width="1.5" PointX="24.875" PointY="16.75" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHistoryHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHistoryHeader_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHistoryHeader_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHistoryDetail_iffsJobOrderHistoryHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderHistoryHeader_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupOperationOpeningLocation" Width="1.5" PointX="12.375" PointY="10.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperationStatus" Width="1.5" PointX="32.375" PointY="20.375" />
+        <AssociationConnector Association="ErpModel.FK_ifmsOperationStatus_ifmsOperationStatusTemplate" />
+        <EntityTypeShape EntityType="ErpModel.iffsOperation" Width="1.5" PointX="30.125" PointY="14.75" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee3" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee4" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee5" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee6" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_hrmsEmployee7" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_iffsJobOrderHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_iffsLupLoadingPort" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_iffsLupOperationOpeningLocation" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_iffsLupPortOfDestination" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperation_iffsLupPortOfOrigin" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationExpense_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsOperationStatus_iffsOperation" />
+        <EntityTypeShape EntityType="ErpModel.iffsServiceAgreement" Width="1.5" PointX="27.625" PointY="9.625" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceAgreement_iffsCustomer" />
+        <EntityTypeShape EntityType="ErpModel.iffsContainer" Width="1.5" PointX="35.375" PointY="12.125" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainer_iffsLupContainerType" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainer_iffsLupCurrency" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainer_iffsOperation" />
+        <EntityTypeShape EntityType="ErpModel.iffsContainerStatusTemplate" Width="1.5" PointX="10.5" PointY="20.125" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainerStatusTemplate_coreRole" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainerStatusTemplate_iffsLupDataType" />
+        <EntityTypeShape EntityType="ErpModel.iffsContainerStatus" Width="1.5" PointX="37.625" PointY="16.375" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainerStatus_iffsContainer" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainerStatus_iffsContainerStatusTemplate" />
+        <EntityTypeShape EntityType="ErpModel.iffsQuotationTermandCondition" Width="1.5" PointX="24.625" PointY="24.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsQuotationHeader" Width="1.5" PointX="30.75" PointY="7" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsJobOrderQuotation_iffsQuotationHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsQuotationHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_iffsQuotationHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_iffsQuotationHeader1" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationTermandCondition_iffsQuotationHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceAgreement_iffsQuotationHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationDetail_iffsServiceRequestDetail" />
+        <EntityTypeShape EntityType="ErpModel.iffsServiceRequest" Width="1.5" PointX="33.875" PointY="4.25" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequest_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequest_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequest_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequest_iffsCustomer" />
+        <AssociationConnector Association="ErpModel.FK_iffsQuotationHeader_iffsServiceRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequest_iffsServiceAgreement" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequestDetail_iffsServiceRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsServiceRequestDocuments_iffsServiceRequest" />
+        <EntityTypeShape EntityType="ErpModel.iffsInvoiceDetail" Width="1.5" PointX="20.5" PointY="16.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsInvoiceOperation" Width="1.5" PointX="35.75" PointY="20.125" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceDetail_iffsLupCurrency" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceDetail_iffsLupServiceUnitType" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceDetail_iffsService" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceOperation_iffsOperation" />
+        <EntityTypeShape EntityType="ErpModel.iffsInvoiceHeader" Width="1.5" PointX="26.875" PointY="2" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceHeader_hrmsEmployee1" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceHeader_hrmsEmployee2" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceHeader_iffsCustomer" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceDetail_iffsInvoiceHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceHeader_iffsInvoiceHeader1" />
+        <AssociationConnector Association="ErpModel.FK_iffsInvoiceOperation_iffsInvoiceHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsContainerStatusTemplate_iffsLupOperationType" />
+        <EntityTypeShape EntityType="ErpModel.iffsCrateAndBoxRequestDetail" Width="1.5" PointX="34.625" PointY="30" />
+        <EntityTypeShape EntityType="ErpModel.iffsCrateAndBoxRequestHeader" Width="1.5" PointX="32.375" PointY="24.125" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupBoxType" Width="1.5" PointX="32.375" PointY="30.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupClientStatus" Width="1.5" PointX="17.875" PointY="27.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupDamageType" Width="1.5" PointX="41.375" PointY="12.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupRoomType" Width="1.5" PointX="25.125" PointY="27.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsLupTruckType" Width="1.5" PointX="38.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingCrateAndBoxConsumption" Width="1.5" PointX="40.625" PointY="28.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingDamageReportDetail" Width="1.5" PointX="40.625" PointY="8.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingDamageReportHeader" Width="1.5" PointX="38.375" PointY="7.875" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingDetail" Width="1.5" PointX="40.625" PointY="16.625" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingHeader" Width="1.5" PointX="38.375" PointY="20.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingList" Width="1.5" PointX="43.625" PointY="19.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingMaterialConsumption" Width="1.5" PointX="40.625" PointY="24.375" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingMaterialDetail" Width="1.5" PointX="37.625" PointY="28.25" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingMaterialHeader" Width="1.5" PointX="35.375" PointY="23.125" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingStaff" Width="1.5" PointX="42.875" PointY="15.875" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingTruckAndMachine" Width="1.5" PointX="40.625" PointY="20.375" />
+        <EntityTypeShape EntityType="ErpModel.iffsReceivingClient" Width="1.5" PointX="12.625" PointY="28.875" />
+        <EntityTypeShape EntityType="ErpModel.iffsShipmentType" Width="1.5" PointX="3.375" PointY="43.125" />
+        <EntityTypeShape EntityType="ErpModel.iffsSurveyRequest" Width="1.5" PointX="14.875" PointY="26.5" />
+        <EntityTypeShape EntityType="ErpModel.iffsSurveyServiceRequest" Width="1.5" PointX="22.375" PointY="27.625" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestHeader_hrmsEmployee_ApprovedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestHeader_hrmsEmployee_PreparedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDamageReportHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDetail_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingHeader_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialHeader_hrmsEmployee_ApprovedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialHeader_hrmsEmployee_CheckedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialHeader_hrmsEmployee_PreparedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_hrmsEmployee" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestDetail_iffsCrateAndBoxRequestHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestDetail_iffsLupBoxType" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingCrateAndBoxConsumption_iffsCrateAndBoxRequestDetail" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestHeader_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsCrateAndBoxRequestHeader_iffsSurveyRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDamageReportHeader_iffsCustomer" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_iffsCustomer" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingList_iffsPackingList" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingTruckAndMachine_iffsPackingTruckAndMachine" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDamageReportHeader_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingHeader_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingList_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialHeader_iffsOperation" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingCrateAndBoxConsumption_iffsPackingConsumptionHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDamageReportDetail_iffsPackingDamageReportHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingDetail_iffsPackingHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingStaff_iffsPackingStaff" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingHeader_iffsSurveyRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingList_iffsPackingHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialConsumption_iffsPackingHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingTruckAndMachine_iffsPackingConsumptionHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialConsumption_iffsPackingMaterialDetail" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialDetail_iffsPackingMaterialHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialHeader_iffsSurveyRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_iffsReceivingClient" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_iffsShipmentType_AirLine" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_iffsShipmentType_RainWay" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyRequest_iffsShipmentType_ShippingLine" />
+        <EntityTypeShape EntityType="ErpModel.lupMeasurementUnit" Width="1.5" PointX="9.375" PointY="14.875" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialDetail_lupMeasurementUnit" />
+        <EntityTypeShape EntityType="ErpModel.iffsSchedule" Width="1.5" PointX="3" PointY="15.875" />
+        <AssociationConnector Association="ErpModel.FK_iffsSchedule_hrmsEmployee" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingListSetting" Width="1.5" PointX="17.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingSurveyDetail" Width="1.5" PointX="27.375" PointY="24.125" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingSurveyHeader" Width="1.5" PointX="20.125" PointY="21.625" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingSurveyHeader_hrmsEmployee_PreparedBy" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingSurveyHeader_iffsLupClientStatus" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingSurveyDetail_iffsLupRoomType" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingListSetting_iffsPackingListSetting" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingSurveyDetail_iffsPackingSurveyHeader" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingSurveyHeader_iffsSurveyRequest" />
+        <AssociationConnector Association="ErpModel.FK_iffsSurveyServiceRequest_iffsPackingSurveyHeader" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingMaterialList" Width="1.5" PointX="7.375" PointY="24" />
+        <EntityTypeShape EntityType="ErpModel.ifmsSetting" Width="1.5" PointX="9.375" PointY="24.75" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterialList_lupMeasurementUnit" />
+        <EntityTypeShape EntityType="ErpModel.iffsPackingMaterial" Width="1.5" PointX="27.375" PointY="28.5" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterial_iffsPackingMaterialList" />
+        <AssociationConnector Association="ErpModel.FK_iffsPackingMaterial_iffsPackingSurveyHeader" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

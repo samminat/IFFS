@@ -1,0 +1,48 @@
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache

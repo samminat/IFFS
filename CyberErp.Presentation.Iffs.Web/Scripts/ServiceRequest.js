@@ -1,0 +1,1069 @@
+﻿Ext.ns('Ext.erp.iffs.ux.serviceRequest');
+Ext.ns('Ext.erp.iffs.ux.serviceRequestDetail');
+/**
+* @desc      Service Request registration form
+* @author    Dawit Kiros
+* @copyright (c) 2017, Cybersoft
+* @date      December 16, 2017
+* @namespace Ext.erp.iffs.ux.serviceRequest
+* @class     Ext.erp.iffs.ux.serviceRequest.Form
+* @extends   Ext.form.FormPanel
+*/
+Ext.erp.iffs.ux.serviceRequest.Form = function (config) {
+    Ext.erp.iffs.ux.serviceRequest.Form.superclass.constructor.call(this, Ext.apply({
+        api: {
+            load: ServiceRequest.Get,
+            submit: ServiceRequest.Save
+        },
+        paramOrder: ['Id'],
+        defaults: {
+            labelStyle: 'text-align:left;',
+            msgTarget: 'side'
+        },
+        id: 'serviceRequest-form',
+        padding: 5,
+        labelWidth: 120,
+        autoHeight: true,
+        border: false,
+        isFormLoad: false,
+        frame: true,
+        items: [{
+            layout: 'column',
+            items: [{
+                columnWidth: .6,
+                defaults: {
+                    anchor: '95%',
+                    labelStyle: 'text-align:left;',
+                    msgTarget: 'side'
+                },
+                border: false,
+                layout: 'form',
+                items: [{
+                    name: 'Id',
+                    xtype: 'hidden'
+                }, {
+                    name: 'CustomerId',
+                    xtype: 'hidden'
+                }, {
+                    xtype: 'compositefield',
+                    fieldLabel: 'Customer',
+                    defaults: {
+                        flex: 1
+                    },
+                    items: [{
+                        hiddenName: 'Customer',
+                        xtype: 'combo',
+                        fieldLabel: 'Customer',
+                        typeAhead: true,
+                        hideTrigger: true,
+                        minChars: 2,
+                        listWidth: 280,
+                        emptyText: '---Type to Search---',
+                        mode: 'remote',
+                        allowBlank: false,
+                        tpl: '<tpl for="."><div ext:qtip="{Id}. {Name}" class="x-combo-list-item">' +
+                            '<h3><span>{Name}</span></h3> </div></tpl>',
+                        store: new Ext.data.DirectStore({
+                            reader: new Ext.data.JsonReader({
+                                successProperty: 'success',
+                                idProperty: 'Id',
+                                root: 'data',
+                                fields: ['Id', 'Name', 'CustomerGroupId', 'CustomerGroup']
+                            }),
+                            autoLoad: true,
+                            api: { read: Iffs.GetCustomer }
+                        }),
+                        valueField: 'Name',
+                        displayField: 'Name',
+                        pageSize: 10,
+                        listeners: {
+                            select: function (cmb, rec, idx) {
+                                var form = Ext.getCmp('serviceRequest-form').getForm();
+                                form.findField('CustomerId').setValue(rec.id);
+                            },
+                            change: function (cmb, newvalue, oldvalue) {
+                                if (newvalue == "") {
+                                    var form = Ext.getCmp('serviceRequest-form').getForm();
+
+                                    form.findField('CustomerId').reset();
+                                }
+                            }
+                        }
+                    }, {
+                        xtype: 'button',
+                        iconCls: 'icon-filter',
+                        width: 25,
+                        handler: function () {
+                            var form = Ext.getCmp('serviceRequest-form').getForm();
+                            new Ext.erp.iffs.ux.common.CustomerSelectionWindow({
+                                parentForm: form
+                            }).show();
+                        }
+                    },
+                    {
+                        xtype: 'button',
+                        width: 30,
+                        id: 'new-Customer',
+                        iconCls: 'icon-add',
+                        handler: function () {
+                            var form = Ext.getCmp('serviceRequest-form').getForm();
+                            new Ext.erp.iffs.ux.customer.Window({
+                                targetForm: form,
+                                customerId: 0,
+                            }).show();
+
+                        }
+                    }
+                    ]
+
+                }, {
+                    name: 'RequestNo',
+                    xtype: 'textfield',
+                    fieldLabel: 'Request Number',
+                    readOnly: true,
+                    allowBlank: false,
+                    value :'AutoGenerated',
+                    style: 'font-weight: italics; color: grey;'
+                }, {
+                    name: 'RequestDate',
+                    xtype: 'datefield',
+                    fieldLabel: 'Request Date',
+                    altFormats: 'c', anchor: '95%',
+                    editable: true,
+                    allowBlank: false
+                }, {
+                    name: 'RequesterFirstName',
+                    xtype: 'textfield',
+                    anchor:'95%',
+                    fieldLabel: 'Requestor First Name',
+                    allowBlank: false
+                }, {
+                    name: 'RequesterLastName',
+                    xtype: 'textfield',
+                    anchor:'95%',
+                    fieldLabel: 'Requestor Last Name',
+                    allowBlank: false
+                }, {
+                    name: 'Address',
+                    xtype: 'textarea',
+                    anchor: '95%',
+                    fieldLabel: 'Address',
+                    
+                },  {
+                    name: 'CommodityDescription',
+                    xtype: 'textarea',
+                    checked: false, anchor:'95%',
+                    fieldLabel: 'Commodity Description',
+                    width: 200
+                } ]
+            }, {
+                columnWidth: .4,
+                labelWidth: 100,
+                defaults: {
+                    anchor: '98%',
+                    labelStyle: 'text-align:left;',
+                    msgTarget: 'side'
+                },
+                border: true,
+                layout: 'form',
+                items: [{
+                    name: 'CanBeHandled',
+                    xtype: 'checkbox',
+                    checked: false,
+                    fieldLabel: 'Can be handled?'
+                }, {
+                    name: 'ResponseDate',
+                    xtype: 'datefield',
+                    fieldLabel: 'Response Date',
+                    altFormats: 'c',
+                    editable: true,
+                    allowBlank: false
+                }, {
+                    name: 'HasAgreement',
+                    xtype: 'checkbox',
+                    checked: false,
+                    fieldLabel: 'HasAgreement',
+                    listeners: {
+                        scope: this,
+                        check: function (field, checked) {
+                            var form = Ext.getCmp('serviceRequest-form').getForm();
+                            if (checked) {
+                                form.findField('AgreementNo').show();
+                            }
+                            else {
+                                form.findField('AgreementNo').hide();
+                            }
+                        }
+                    }
+                }, {
+                    name: 'AgreementNo',
+                    xtype: 'textfield',
+                    checked: false,
+                    hidden: true,
+                    fieldLabel: 'Agreement No'
+                }, {
+                    name: 'Remark',
+                    xtype: 'textarea',
+                    checked: false,
+                    fieldLabel: 'Remark',
+                    height: 168,
+                    width: 200
+                }, {
+                    name: 'PreparedById',
+                    xtype: 'hidden'
+                }, {
+                    name: 'PreparedDate',
+                    xtype: 'datefield',
+                    fieldLabel: 'PreparedDate',
+                    hidden:true,
+                    altFormats: 'c',
+                    editable: true
+                }
+                ]
+
+            }]
+
+        }]
+    }, config));
+}
+Ext.extend(Ext.erp.iffs.ux.serviceRequest.Form, Ext.form.FormPanel);
+Ext.reg('serviceRequest-form', Ext.erp.iffs.ux.serviceRequest.Form);
+
+var selModelPItems = new Ext.grid.CheckboxSelectionModel();
+/**
+* @desc      Service Request registration form host window
+* @author    Dawit Kiros
+* @copyright (c) 2017, Cybersoft
+* @date      December 16, 2017
+* @namespace Ext.erp.iffs.ux.serviceRequest
+* @class     Ext.erp.iffs.ux.serviceRequest.Window
+* @extends   Ext.Window
+*/
+Ext.erp.iffs.ux.serviceRequest.Window = function (config) {
+    Ext.erp.iffs.ux.serviceRequest.Window.superclass.constructor.call(this, Ext.apply({
+        layout: 'fit',
+        width: 1050,
+        id: 'serviceRequest-window',
+        autoHeight: true,
+        closeAction: 'close',
+        modal: true,
+        actionType: 'Add',
+        resizable: false,
+        buttonAlign: 'right',
+        bodyStyle: 'padding:5px;',
+        listeners: {
+            show: function () {
+                this.form.getForm().findField('Id').setValue(this.ServiceRequestId);
+                if (this.isCopy == true) {
+                    Ext.getCmp('serviceRequest-window').actionType = "Add";
+                    var form = Ext.getCmp('serviceRequest-form');
+                    form.load({
+                        params: { Id: this.ServiceRequestId },
+                        success: function () {
+
+                            Ext.getCmp('serviceRequest-form').getForm().findField('Id').setValue(0);
+                            Ext.getCmp('serviceRequest-form').getForm().findField('RequestNo').setValue("Auto-Generated");
+
+                        }
+                    });
+                    var grid = Ext.getCmp('serviceRequestDetail-grid');
+                    var store = grid.getStore();
+                    store.baseParams = { record: Ext.encode({ requestId: this.ServiceRequestId }) };
+                    store.load({ params: { start: 0, limit: 10, sort: '', dir: '', RequestId: this.ServiceRequestId } });
+
+                }
+               else if (this.ServiceRequestId !== "") {
+                    Ext.getCmp('serviceRequest-window').actionType = "Edit";
+                    this.form.load({ params: { Id: this.ServiceRequestId } });
+
+                    var grid = Ext.getCmp('serviceRequestDetail-grid');
+                    var store = grid.getStore();
+                    store.baseParams = { record: Ext.encode({ requestId: this.ServiceRequestId }) };
+                    store.load({ params: { start: 0, limit: 10, sort:'', dir: '', RequestId: this.ServiceRequestId } });
+                }
+                else
+                    Ext.getCmp('serviceRequest-window').actionType = "Add";
+            },
+            scope: this
+        }
+    }, config));
+}
+Ext.extend(Ext.erp.iffs.ux.serviceRequest.Window, Ext.Window, {
+    initComponent: function () {
+        this.form = new Ext.erp.iffs.ux.serviceRequest.Form();
+        this.grid = new Ext.erp.iffs.ux.serviceRequestDetail.Grid();
+        this.items = [this.form, this.grid];
+        this.buttons = [{
+            text: 'Save',
+            iconCls: 'icon-save',
+            handler: this.onSave,
+            scope: this
+        }, {
+            text: 'Close',
+            iconCls: 'icon-exit',
+            handler: this.onClose,
+            scope: this
+        }];
+
+        Ext.erp.iffs.ux.serviceRequest.Window.superclass.initComponent.call(this, arguments);
+    },
+    onSave: function () {
+
+        if (!this.form.getForm().isValid()) return;
+        var gridDetail = Ext.getCmp('serviceRequestDetail-grid');
+        var rec = '';
+        var store = gridDetail.getStore();
+        var action = Ext.getCmp('serviceRequest-window').actionType;
+        store.each(function (item) {
+            if (item.data['OperationTypeId'] !== 0) {
+                rec = rec + item.data['OperationTypeId'] + ':' +
+                    item.data['CommodityTypeId'] + ':' +
+                    item.data['Volume'] + ':' +
+                    item.data['Weight'] + ':' +
+                    item.data['Pcs'] + ':' +
+                    item.data['ContainerTypeId'] + ':' +
+                    item.data['POE'] + ':' +
+                    item.data['POD'] + ':' +
+                    item.data['Description'] + ':' +
+                    item.data['TareWeight'] + ';';
+                
+                   
+            }
+        });
+
+        if (rec.length == 0) {
+            Ext.MessageBox.show({
+                title: 'Incomplete',
+                msg: 'Value cannot be empty!',
+                buttons: Ext.Msg.OK,
+                scope: this
+            });
+            return;
+        }
+
+        this.form.getForm().submit({
+            waitMsg: 'Please wait...',
+            params: { record: Ext.encode({ serviceRequestDetails: rec, action: action }) },
+            success: function (response) {
+                var surveyGrid = Ext.getCmp('PackingSurvey-grid');
+                if (surveyGrid != undefined)
+                    surveyGrid.SaveSurveyServiceRequest(action.result.Id);
+                Ext.getCmp('serviceRequest-form').getForm().reset();
+                Ext.getCmp('serviceRequest-paging').doRefresh();
+                Ext.getCmp('serviceRequest-window').close();
+
+                Ext.MessageBox.show({
+                    title: 'Success',
+                    msg: 'Data has been successfully saved!',
+                    buttons: Ext.Msg.OK,
+                    icon: Ext.MessageBox.INFO,
+                    scope: this
+                });
+            },
+            failure: function (f, a) {
+                Ext.MessageBox.show({
+                    title: 'Error',
+                    msg: a.result.data,
+                    buttons: Ext.Msg.OK,
+                    icon: Ext.MessageBox.ERROR,
+                    scope: this
+                });
+            }
+        });
+    },
+    onClose: function () {
+        this.close();
+    }
+});
+Ext.reg('serviceRequest-window', Ext.erp.iffs.ux.serviceRequest.Window);
+
+
+
+Ext.erp.iffs.ux.serviceRequestDetail.Grid = function (config) {
+    Ext.erp.iffs.ux.serviceRequestDetail.Grid.superclass.constructor.call(this, Ext.apply({
+        store: new Ext.data.DirectStore({
+            directFn: ServiceRequest.GetDetailByRequestHeader,
+            paramsAsHash: false,
+            paramOrder: 'start|limit|sort|dir|record',
+            root: 'data',
+            idProperty: 'Id',
+            totalProperty: 'total',
+            sortInfo: {
+                field: 'Id',
+                direction: 'ASC'
+            },
+            fields: ['Id', 'OperationTypeId', 'Description', 'OperationType', 'TareWeight', 'CommodityTypeId', 'CommodityType', 'Volume', 'Weight', 'Pcs', 'ContainerTypeId', 'ContainerType', 'POE', 'POD'],
+            remoteSort: true,
+            listeners: {
+                beforeLoad: function () {
+                    this.body.mask('Loading...', 'x-mask-loading');
+                },
+                load: function () {
+                    this.body.unmask();
+                },
+                loadException: function () {
+                    this.body.unmask();
+                },
+                scope: this
+            }
+        }),
+        id: 'serviceRequestDetail-grid',
+        pageSize: 10,
+        height: 250,
+        stripeRows: true,
+        columnLines: true,
+        border: true,
+        clicksToEdit: 1,
+        sm: new Ext.grid.RowSelectionModel({
+            singleSelect: true,
+            onEditorKey: function (field, e) {
+                var k = e.getKey(), newCell = null, g = this.grid, ed = g.activeEditor;
+                var shift = e.shiftKey;
+                if (k == e.TAB) {
+                    e.stopEvent();
+                    ed.completeEdit();
+                    if (shift) {
+                        newCell = g.walkCells(ed.row, ed.col - 1, -1, this.acceptsNav, this);
+                    } else {
+                        newCell = g.walkCells(ed.row, ed.col + 1, 1, this.acceptsNav, this);
+                        if (!newCell) {
+                            g.addRow();
+                        }
+                    }
+                    if (newCell) {
+                        g.startEditing(newCell[0], newCell[1]);
+                    }
+                }
+            }
+        }),
+        listeners: {
+            afteredit: function (e) {
+                var record = e.record;
+                var grid = Ext.getCmp('serviceRequestDetail-grid');
+                var store, cm;
+                if (e.field == 'OperationType') {
+                    cm = grid.getColumnModel();
+                    var oprationType = cm.getColumnAt(3);
+                    var editor = oprationType.editor;
+                    store = editor.store;
+                    if (store.data.length == 0) {
+                        record.set('OperationType', e.originalValue);
+                    } else {
+                        try {
+                            var typeId = store.getById(editor.getValue()).data.Id;
+                            record.set('OperationTypeId', typeId);
+                            record.set('OperationType', editor.getRawValue());
+
+                        } catch (e) {
+                            record.set('OperationTypeId', '');
+
+                            Ext.MessageBox.show({
+                                title: 'Error',
+                                msg: 'Operation Type Not Selected. Please enter the Operation Type appropriately!',
+                                buttons: Ext.Msg.OK,
+                                icon: Ext.MessageBox.ERROR,
+                                scope: this
+                            });
+                        }
+                    }
+                }
+                if (e.field == 'CommodityType') {
+                    cm = grid.getColumnModel();
+                    var commodityType = cm.getColumnAt(6);
+                    var editorComType = commodityType.editor;
+                    store = editorComType.store;
+                    if (store.data.length == 0) {
+                        record.set('CommodityType', e.originalValue);
+                    } else {
+                        var typeId = store.getById(editorComType.getValue()).data.Id;
+                        record.set('CommodityTypeId', typeId);
+                        record.set('CommodityType', editorComType.getRawValue());
+                    }
+                }
+                if (e.field == 'ContainerType') {
+                    cm = grid.getColumnModel();
+                    var containerType = cm.getColumnAt(11);
+                    var editorContainerType = containerType.editor;
+                    store = editorContainerType.store;
+                    if (store.data.length == 0) {
+                        record.set('ContainerType', e.originalValue);
+                    } else {
+                        var typeId = store.getById(editorContainerType.getValue()).data.Id;
+                        record.set('ContainerTypeId', typeId);
+                        record.set('ContainerType', editorContainerType.getRawValue());
+                    }
+                }
+            }
+        },
+        viewConfig: {
+            forceFit: true,
+            autoFill: true
+        },
+                columns: [{
+                    dataIndex: 'Id',
+                    header: 'Id',
+                    sortable: false,
+                    hidden: true,
+                    width: 100,
+                    menuDisabled: true
+                }, {
+                    dataIndex: 'OperationTypeId',
+                    header: 'OperationTypeId',
+                    sortable: false,
+                    hidden: true,
+                    width: 100,
+                    menuDisabled: true
+                }, new Ext.grid.RowNumberer(), {
+                    dataIndex: 'OperationType',
+                    header: 'Operation Type',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    forceSelection: true,
+                    xtype: 'combocolumn',
+                    editor: new Ext.form.ComboBox({
+                        typeAhead: false,
+                        triggerAction: 'all',
+                        mode: 'local',
+                        store: new Ext.data.DirectStore({
+                            reader: new Ext.data.JsonReader({
+                                successProperty: 'success',
+                                idProperty: 'Id',
+                                root: 'data',
+                                fields: ['Id', 'Name']
+                            }),
+                            autoLoad: true,
+                            api: { read: Iffs.GetOperationType }
+                        }),
+                        valueField: 'Id',
+                        displayField: 'Name'
+                    })
+                }, {
+                    dataIndex: 'Description',
+                    header: 'Description',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.TextField({
+                        allowBlank: true,
+                        allowNegative: false,
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'CommodityTypeId',
+                    header: 'CommodityTypeId',
+                    sortable: false,
+                    hidden: true,
+                    width: 100,
+                    menuDisabled: true
+                }, {
+                    dataIndex: 'CommodityType',
+                    header: 'Commodity Type',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    forceSelection: true,
+                    xtype: 'combocolumn',
+                    editor: new Ext.form.ComboBox({
+                        typeAhead: true,
+                        triggerAction: 'all',
+                        mode: 'local',
+                        store: new Ext.data.DirectStore({
+                            reader: new Ext.data.JsonReader({
+                                successProperty: 'success',
+                                idProperty: 'Id',
+                                root: 'data',
+                                fields: ['Id', 'Name']
+                            }),
+                            autoLoad: true,
+                            api: { read: Iffs.GetCommodityType }
+                        }),
+                        valueField: 'Id',
+                        displayField: 'Name'
+                    })
+                }, {
+                    dataIndex: 'Volume',
+                    header: 'Volume(m3)',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.NumberField({
+                        allowBlank: true,
+                        allowNegative: false,
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'Weight',
+                    header: 'Weight(Kg)',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.NumberField({
+                        allowBlank: true,
+                        allowNegative: false,
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'Pcs',
+                    header: 'Pcs',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.NumberField({
+                        allowBlank: true,
+                        allowNegative: false,
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'ContainerTypeId',
+                    header: 'ContainerType',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    hidden: true
+
+                }, {
+                    dataIndex: 'ContainerType',
+                    header: 'Container Type',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    forceSelection: true,
+                    xtype: 'combocolumn',
+                    editor: new Ext.form.ComboBox({
+                        typeAhead: true,
+                        triggerAction: 'all',
+                        mode: 'local',
+                        store: new Ext.data.DirectStore({
+                            reader: new Ext.data.JsonReader({
+                                successProperty: 'success',
+                                idProperty: 'Id',
+                                root: 'data',
+                                fields: ['Id', 'Name']
+                            }),
+                            autoLoad: true,
+                            api: { read: Iffs.GetContainerType }
+                        }),
+                        valueField: 'Id',
+                        displayField: 'Name'
+                    })
+                }, {
+                    dataIndex: 'TareWeight',
+                    header: 'Tare Weight',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.TextField({
+                        allowBlank: true,
+
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'POE',
+                    header: 'POE',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.TextField({
+                        allowBlank: true,
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }, {
+                    dataIndex: 'POD',
+                    header: 'POD',
+                    sortable: true,
+                    width: 100,
+                    menuDisabled: true,
+                    align: 'left',
+                    editor: new Ext.form.TextField({
+                        allowBlank: true,
+
+                        listeners: {
+                            focus: function (field) {
+                                field.selectText();
+                            }
+                        }
+                    })
+
+                }]
+    }, config));
+};
+Ext.extend(Ext.erp.iffs.ux.serviceRequestDetail.Grid, Ext.grid.EditorGridPanel, {
+    initComponent: function () {
+                //this.store.baseParams = { record: Ext.encode({ EmpId: this.lrEmpId, PerId: this.lrPerId }) };
+                this.tbar = [{
+                    xtype: 'button',
+                    text: 'Insert',
+                    id: 'insertRows',
+                    iconCls: 'icon-add',
+                    handler: this.addRow
+                }, {
+                    xtype: 'button',
+                    text: 'Remove',
+                    id: 'deleteRows',
+                    iconCls: 'icon-delete',
+                    handler: this.deleteRow
+                }];
+                this.bbar = new Ext.PagingToolbar({
+                    id: 'serviceRequestDetail-paging',
+                    store: this.store,
+                    displayInfo: true,
+                    pageSize: this.pageSize
+                });
+        Ext.erp.iffs.ux.serviceRequestDetail.Grid.superclass.initComponent.apply(this, arguments);
+    },
+        afterRender: function () {
+            this.addRow();
+            Ext.erp.iffs.ux.serviceRequestDetail.Grid.superclass.afterRender.apply(this, arguments);
+        },
+        addRow: function () {
+            var grid = Ext.getCmp('serviceRequestDetail-grid');
+            var store = grid.getStore();
+            var requestDetail = store.recordType;
+            var p = new requestDetail({
+                Id: 0,
+                OperationTypeId: 0,
+                OperationType: '',
+                CommodityTypeId: 0,
+                CommodityType: '',
+                Volume: 0,
+                Weight: 0,
+                Pcs: 0,
+                ContainerType: '',
+                POE: '',
+                POD: '',
+                Description: '',
+                TareWeight:''
+
+            });
+            var count = store.getCount();
+            grid.stopEditing();
+
+            store.insert(count, p);
+            if (count > 0) {
+                grid.startEditing(count, 2);
+            }
+        },
+        deleteRow: function () {
+
+            var grid = Ext.getCmp('serviceRequestDetail-grid');
+            if (!grid.getSelectionModel().hasSelection()) return;
+            var record = grid.getSelectionModel().getSelections();
+            for (var i = 0; i < record.length; i++) {
+                grid.store.remove(record);
+            }
+        }
+});
+Ext.reg('serviceRequestDetail-grid', Ext.erp.iffs.ux.serviceRequestDetail.Grid);
+
+
+
+/**
+* @desc      Service Request grid
+* @author    Dawit Kiros
+* @copyright (c) 2017, Cybersoft
+* @date      December 16, 2017
+* @namespace Ext.erp.iffs.ux.serviceRequest
+* @class     Ext.erp.iffs.ux.serviceRequest.Grid
+* @extends   Ext.grid.GridPanel
+*/
+Ext.erp.iffs.ux.serviceRequest.Grid = function (config) {
+    Ext.erp.iffs.ux.serviceRequest.Grid.superclass.constructor.call(this, Ext.apply({
+        store: new Ext.data.DirectStore({
+            directFn: ServiceRequest.GetAll,
+            paramsAsHash: false,
+            paramOrder: 'start|limit|sort|dir|record',
+            root: 'data',
+            idProperty: 'Id',
+            totalProperty: 'total',
+            sortInfo: {
+                field: 'Id',
+                direction: 'ASC'
+            },
+            fields: ['Id', 'CustomerName', 'RequestDate', 'RequestNo', 'RequesterFirstName', 'RequesterLastName', 'CanBeHandled'],
+            remoteSort: true,
+            listeners: {
+                beforeLoad: function () {
+                    this.body.mask('Loading...', 'x-mask-loading');
+                },
+                load: function () {
+                    this.body.unmask();
+                },
+                loadException: function () {
+                    this.body.unmask();
+                },
+                scope: this
+            }
+        }),
+        id: 'serviceRequest-grid',
+        searchCriteria: {},
+        pageSize: 40,
+        //buffered: true,
+        //height: 600,
+        stripeRows: true,
+        columnLines: true,
+        border: false,
+        sm: new Ext.grid.RowSelectionModel({
+            singleSelect: true
+        }),
+        viewConfig: {
+            forceFit: true,
+            autoFill: true
+        },
+        listeners: {
+            rowClick: function () {
+               
+
+            },
+            scope: this
+        },
+        columns: [
+         {
+            dataIndex: 'Id',
+            header: 'Id',
+            sortable: true,
+            hidden: true,
+            width: 100,
+            menuDisabled: true
+        }, new Ext.grid.RowNumberer(), {
+            dataIndex: 'CustomerName',
+            header: 'Customer',
+            sortable: true,
+            width: 220,
+            menuDisabled: false,
+            hidden: false
+        }, {
+            dataIndex: 'RequestNo',
+            header: 'Request No',
+            sortable: true,
+            width: 150,
+            menuDisabled: false,
+            hidden: false
+        }, {
+            dataIndex: 'RequestDate',
+            header: 'Request Date',
+            sortable: true,
+            width: 300,
+            menuDisabled: true,
+            hidden: false
+        }, {
+            dataIndex: 'RequesterFirstName',
+            header: 'Requestor F. Name',
+            sortable: true,
+            width: 200,
+            menuDisabled: true,
+            hidden: false
+        }, {
+            dataIndex: 'RequesterLastName',
+            header: 'Requestor L. Name',
+            sortable: true,
+            width: 220,
+            menuDisabled: true,
+            hidden: false
+        }, {
+            dataIndex: 'CanBeHandled',
+            header: 'Can Be Handled',
+            sortable: true,
+            width: 250,
+            hidden: false,
+            renderer: function (value, metaData, record, rowIndex, colIndex, store) {
+                if (value)
+                    return '<img src="Content/images/app/yes.png"/>';
+                else
+                    return '<img src="Content/images/app/no.png"/>';
+            }
+
+        }]
+    }, config));
+};
+Ext.extend(Ext.erp.iffs.ux.serviceRequest.Grid, Ext.grid.EditorGridPanel, {
+    initComponent: function () {
+        this.store.baseParams = { record: Ext.encode({ mode: 'get' }) };
+        this.tbar = [];
+        this.bbar = new Ext.PagingToolbar({
+            id: 'serviceRequest-paging',
+            store: this.store,
+            displayInfo: true,
+            pageSize: this.pageSize
+        });
+        Ext.erp.iffs.ux.serviceRequest.Grid.superclass.initComponent.apply(this, arguments);
+    },
+    afterRender: function () {
+        this.getStore().load({
+            params: { start: 0, limit: this.pageSize }
+        });
+        Ext.erp.iffs.ux.serviceRequest.Grid.superclass.afterRender.apply(this, arguments);
+    }
+});
+Ext.reg('serviceRequest-grid', Ext.erp.iffs.ux.serviceRequest.Grid);
+
+/**
+* @desc      Service Request panel
+* @author    Dawit Kiros
+* @copyright (c) 2017, Cybersoft
+* @date      December 16, 2017
+* @version   $Id: ServiceRequest.js, 0.1
+* @namespace Ext.erp.iffs.ux.serviceRequest
+* @class     Ext.erp.iffs.ux.serviceRequest.Panel
+* @extends   Ext.Panel
+*/
+Ext.erp.iffs.ux.serviceRequest.Panel = function (config) {
+    Ext.erp.iffs.ux.serviceRequest.Panel.superclass.constructor.call(this, Ext.apply({
+        layout: 'fit',
+        border: false,
+        tbar: {
+            xtype: 'toolbar',
+            items: [{
+                xtype: 'button',
+                text: 'Add',
+                id: 'btnAddServiceRequest',
+                iconCls: 'icon-add',
+                handler: this.onAddClick
+            }, {
+                xtype: 'tbseparator'
+            }, {
+                xtype: 'button',
+                text: 'Edit',
+                id: 'btnEditServiceRequest',
+                iconCls: 'icon-edit',
+                handler: this.onEditClick
+            }, {
+                xtype: 'tbseparator'
+            },  {
+                xtype: 'button',
+                text: 'Delete',
+                id: 'btnDeleteServiceRequest',
+                iconCls: 'icon-delete',
+                handler: this.onDeleteClick
+            }, {
+                xtype: 'tbseparator'
+            }, {
+                xtype: 'button',
+                text: 'Copy',
+                id: 'copyServiceRequest',
+                iconCls: 'icon-accept',
+                handler: this.onCopy
+            }, {
+                xtype: 'tbseparator'
+            }, {
+                xtype: 'button',
+                text: 'Upload Documents',
+                id: 'btnUploadDocuments',
+                iconCls: 'icon-upload',
+                handler: this.onUploadClick
+            }, {
+                xtype: 'tbseparator'
+            }, '->', {
+                id: 'txtSearchPItems',
+                xtype: 'textfield',
+                emptyText: 'Search',
+                submitEmptyText: false,
+                enableKeyEvents: true,
+                style: {
+                    borderRadius: '5px',
+                    padding: '0 10px',
+                    width: '179px'
+                },
+                listeners: {
+                    specialkey: function (field, e) {
+                        if (e.getKey() == e.ENTER) {
+                            var pItemsGrid = Ext.getCmp('serviceRequest-grid');
+                            pItemsGrid.store.baseParams['record'] = Ext.encode({ searchText: field.getValue() });
+                            //pItemsGrid.store.baseParams = { record: Ext.encode({ controlAccountId: this.controlAccountId }) };
+                            pItemsGrid.store.load({ params: { start: 0, limit: pItemsGrid.pageSize } });
+                        }
+                    },
+                    keyup: function (field) {
+                        if (field.getValue() == '') {
+                            var pItemsGrid = Ext.getCmp('serviceRequest-grid');
+                            pItemsGrid.store.baseParams['record'] = Ext.encode({ searchText: field.getValue() });
+                            //pItemsGrid.store.baseParams = { record: Ext.encode({ controlAccountId: this.controlAccountId }) };
+                            pItemsGrid.store.load({ params: { start: 0, limit: pItemsGrid.pageSize } });
+                        }
+                    }
+                }
+            }]
+        }
+    }, config));
+}
+Ext.extend(Ext.erp.iffs.ux.serviceRequest.Panel, Ext.Panel, {
+    initComponent: function () {
+        this.items = [{
+            xtype: 'serviceRequest-grid',
+            id: 'serviceRequest-grid'
+        }];
+        Ext.erp.iffs.ux.serviceRequest.Panel.superclass.initComponent.apply(this, arguments);
+    },
+
+    onAddClick: function () {
+        new Ext.erp.iffs.ux.serviceRequest.Window({
+            ServiceRequestId: '',
+            title: 'Add Service Request'
+        }).show();
+    },
+    onEditClick: function () {
+        var grid = Ext.getCmp('serviceRequest-grid');
+        if (!grid.getSelectionModel().hasSelection()) return;
+        var id = grid.getSelectionModel().getSelected().get('Id');
+        new Ext.erp.iffs.ux.serviceRequest.Window({
+            ServiceRequestId: id,
+            title: 'Edit Service Request'
+        }).show();
+    },
+    onCopy: function () {
+        var grid = Ext.getCmp('serviceRequest-grid');
+        if (!grid.getSelectionModel().hasSelection()) return;
+        var id = grid.getSelectionModel().getSelected().get('Id');
+        new Ext.erp.iffs.ux.serviceRequest.Window({
+            isCopy: true,
+            ServiceRequestId: id,
+            title: 'Copy Service Request'
+        }).show();
+    }, onUploadClick: function () {
+        var grid = Ext.getCmp('serviceRequest-grid');
+        if (!grid.getSelectionModel().hasSelection()) return;
+        var id = grid.getSelectionModel().getSelected().get('Id');
+        new Ext.erp.iffs.ux.serviceRequestFileUploader.Window({
+            RequestId: id,
+            title: 'Add File'
+        }).show();
+    },
+});
+Ext.reg('serviceRequest-panel', Ext.erp.iffs.ux.serviceRequest.Panel);

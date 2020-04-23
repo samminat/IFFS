@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ErpModelStoreContainer" CdmEntityContainer="ErpEntities">
+    <EntitySetMapping Name="coreModule">
+      <EntityTypeMapping TypeName="ErpModel.coreModule">
+        <MappingFragment StoreEntitySet="coreModule">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SubsystemId" ColumnName="SubsystemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreOperation">
+      <EntityTypeMapping TypeName="ErpModel.coreOperation">
+        <MappingFragment StoreEntitySet="coreOperation">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IconCls" ColumnName="IconCls" />
+          <ScalarProperty Name="Href" ColumnName="Href" />
+          <ScalarProperty Name="IsMenu" ColumnName="IsMenu" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corePerson">
+      <EntityTypeMapping TypeName="ErpModel.corePerson">
+        <MappingFragment StoreEntitySet="corePerson">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="GrandFatherNameA" ColumnName="GrandFatherNameA" />
+          <ScalarProperty Name="GrandFatherName" ColumnName="GrandFatherName" />
+          <ScalarProperty Name="FatherNameA" ColumnName="FatherNameA" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="FirstNameA" ColumnName="FirstNameA" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corePosition">
+      <EntityTypeMapping TypeName="ErpModel.corePosition">
+        <MappingFragment StoreEntitySet="corePosition">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsVacant" ColumnName="IsVacant" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="PositionClassId" ColumnName="PositionClassId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corePositionClass">
+      <EntityTypeMapping TypeName="ErpModel.corePositionClass">
+        <MappingFragment StoreEntitySet="corePositionClass">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MonthlyWorkingHours" ColumnName="MonthlyWorkingHours" />
+          <ScalarProperty Name="MaximumAge" ColumnName="MaximumAge" />
+          <ScalarProperty Name="MinimumAge" ColumnName="MinimumAge" />
+          <ScalarProperty Name="PreferredGenderId" ColumnName="PreferredGenderId" />
+          <ScalarProperty Name="SalaryScaleId" ColumnName="SalaryScaleId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreRole">
+      <EntityTypeMapping TypeName="ErpModel.coreRole">
+        <MappingFragment StoreEntitySet="coreRole">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreRolePermission">
+      <EntityTypeMapping TypeName="ErpModel.coreRolePermission">
+        <MappingFragment StoreEntitySet="coreRolePermission">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CanCertify" ColumnName="CanCertify" />
+          <ScalarProperty Name="CanApprove" ColumnName="CanApprove" />
+          <ScalarProperty Name="CanView" ColumnName="CanView" />
+          <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="CanAdd" ColumnName="CanAdd" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreSubsystem">
+      <EntityTypeMapping TypeName="ErpModel.coreSubsystem">
+        <MappingFragment StoreEntitySet="coreSubsystem">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreUser">
+      <EntityTypeMapping TypeName="ErpModel.coreUser">
+        <MappingFragment StoreEntitySet="coreUser">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRevoked" ColumnName="IsRevoked" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreUserSubsystem">
+      <EntityTypeMapping TypeName="ErpModel.coreUserSubsystem">
+        <MappingFragment StoreEntitySet="coreUserSubsystem">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SubsystemId" ColumnName="SubsystemId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hrmsEmployee">
+      <EntityTypeMapping TypeName="ErpModel.hrmsEmployee">
+        <MappingFragment StoreEntitySet="hrmsEmployee">
+          <ScalarProperty Name="ProbationDate" ColumnName="ProbationDate" />
+          <ScalarProperty Name="FundTypeId" ColumnName="FundTypeId" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IsTerminated" ColumnName="IsTerminated" />
+          <ScalarProperty Name="IsUnderProbation" ColumnName="IsUnderProbation" />
+          <ScalarProperty Name="HasMarriageCertificate" ColumnName="HasMarriageCertificate" />
+          <ScalarProperty Name="HasBirthCertificate" ColumnName="HasBirthCertificate" />
+          <ScalarProperty Name="RetirementDate" ColumnName="RetirementDate" />
+          <ScalarProperty Name="PensionNumber" ColumnName="PensionNumber" />
+          <ScalarProperty Name="EmploymentDate" ColumnName="EmploymentDate" />
+          <ScalarProperty Name="BirthLocation" ColumnName="BirthLocation" />
+          <ScalarProperty Name="MotherFullName" ColumnName="MotherFullName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="PrevSalary" ColumnName="PrevSalary" />
+          <ScalarProperty Name="SalaryScaleId" ColumnName="SalaryScaleId" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+          <ScalarProperty Name="EmploymentNatureId" ColumnName="EmploymentNatureId" />
+          <ScalarProperty Name="EmploymentTypeId" ColumnName="EmploymentTypeId" />
+          <ScalarProperty Name="EthnicityId" ColumnName="EthnicityId" />
+          <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+          <ScalarProperty Name="MaritalStatusId" ColumnName="MaritalStatusId" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="SubsidiaryAccountId" ColumnName="SubsidiaryAccountId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsApprover">
+      <EntityTypeMapping TypeName="ErpModel.iffsApprover">
+        <MappingFragment StoreEntitySet="iffsApprover">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsCustomer">
+      <EntityTypeMapping TypeName="ErpModel.iffsCustomer">
+        <MappingFragment StoreEntitySet="iffsCustomer">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TinNo" ColumnName="TinNo" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CustomerGroupId" ColumnName="CustomerGroupId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderDetail">
+        <MappingFragment StoreEntitySet="iffsJobOrderDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="FieldCategory" ColumnName="FieldCategory" />
+          <ScalarProperty Name="JobOrderHeaderId" ColumnName="JobOrderHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderDocument">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderDocument">
+        <MappingFragment StoreEntitySet="iffsJobOrderDocument">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="NoOfAttachedPagesCopy" ColumnName="NoOfAttachedPagesCopy" />
+          <ScalarProperty Name="NoOfAttachedPagesOriginal" ColumnName="NoOfAttachedPagesOriginal" />
+          <ScalarProperty Name="NoOfPagesCopy" ColumnName="NoOfPagesCopy" />
+          <ScalarProperty Name="NoOfPagesOriginal" ColumnName="NoOfPagesOriginal" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="JobOrderHeaderId" ColumnName="JobOrderHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderQuotation">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderQuotation">
+        <MappingFragment StoreEntitySet="iffsJobOrderQuotation">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+          <ScalarProperty Name="JobOrderId" ColumnName="JobOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderTemplate">
+        <MappingFragment StoreEntitySet="iffsJobOrderTemplate">
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="FieldCategory" ColumnName="FieldCategory" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupCommodityType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupCommodityType">
+        <MappingFragment StoreEntitySet="iffsLupCommodityType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupContainerType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupContainerType">
+        <MappingFragment StoreEntitySet="iffsLupContainerType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupCurrency">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupCurrency">
+        <MappingFragment StoreEntitySet="iffsLupCurrency">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupCustomerGroup">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupCustomerGroup">
+        <MappingFragment StoreEntitySet="iffsLupCustomerGroup">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupDataType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupDataType">
+        <MappingFragment StoreEntitySet="iffsLupDataType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupDocumentType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupDocumentType">
+        <MappingFragment StoreEntitySet="iffsLupDocumentType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupOperationType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupOperationType">
+        <MappingFragment StoreEntitySet="iffsLupOperationType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupPOE">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupPOE">
+        <MappingFragment StoreEntitySet="iffsLupPOE">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupServiceUnitType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupServiceUnitType">
+        <MappingFragment StoreEntitySet="iffsLupServiceUnitType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupSizeUnitType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupSizeUnitType">
+        <MappingFragment StoreEntitySet="iffsLupSizeUnitType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupWeightUnitType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupWeightUnitType">
+        <MappingFragment StoreEntitySet="iffsLupWeightUnitType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsNotification">
+      <EntityTypeMapping TypeName="ErpModel.iffsNotification">
+        <MappingFragment StoreEntitySet="iffsNotification">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ActorId" ColumnName="ActorId" />
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperationDocumentTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperationDocumentTemplate">
+        <MappingFragment StoreEntitySet="iffsOperationDocumentTemplate">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperationStatusTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperationStatusTemplate">
+        <MappingFragment StoreEntitySet="iffsOperationStatusTemplate">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PlannedDuration" ColumnName="PlannedDuration" />
+          <ScalarProperty Name="DataTypeId" ColumnName="DataTypeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsQuotationDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsQuotationDetail">
+        <MappingFragment StoreEntitySet="iffsQuotationDetail">
+          <ScalarProperty Name="ServiceRequestDetailId" ColumnName="ServiceRequestDetailId" />
+          <ScalarProperty Name="ComparingSign" ColumnName="ComparingSign" />
+          <ScalarProperty Name="ServiceDescription" ColumnName="ServiceDescription" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ServiceUnitTypeId" ColumnName="ServiceUnitTypeId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsQuotationTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsQuotationTemplate">
+        <MappingFragment StoreEntitySet="iffsQuotationTemplate">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsRoleSetting">
+      <EntityTypeMapping TypeName="ErpModel.iffsRoleSetting">
+        <MappingFragment StoreEntitySet="iffsRoleSetting">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsServiceRequestDocuments">
+      <EntityTypeMapping TypeName="ErpModel.iffsServiceRequestDocuments">
+        <MappingFragment StoreEntitySet="iffsServiceRequestDocuments">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DocumentUrl" ColumnName="DocumentUrl" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsTermsAndConditionsTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsTermsAndConditionsTemplate">
+        <MappingFragment StoreEntitySet="iffsTermsAndConditionsTemplate">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsUserOperationTypeMapping">
+      <EntityTypeMapping TypeName="ErpModel.iffsUserOperationTypeMapping">
+        <MappingFragment StoreEntitySet="iffsUserOperationTypeMapping">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsDocumentNoSetting">
+      <EntityTypeMapping TypeName="ErpModel.iffsDocumentNoSetting">
+        <MappingFragment StoreEntitySet="iffsDocumentNoSetting">
+          <ScalarProperty Name="NoOfDigit" ColumnName="NoOfDigit" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CurrentNo" ColumnName="CurrentNo" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="SurFix" ColumnName="SurFix" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupExpenseType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupExpenseType">
+        <MappingFragment StoreEntitySet="iffsLupExpenseType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperationExpenseTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperationExpenseTemplate">
+        <MappingFragment StoreEntitySet="iffsOperationExpenseTemplate">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="ExpenseTypeId" ColumnName="ExpenseTypeId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderHistoryDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderHistoryDetail">
+        <MappingFragment StoreEntitySet="iffsJobOrderHistoryDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="FieldCategory" ColumnName="FieldCategory" />
+          <ScalarProperty Name="JobOrderHeaderId" ColumnName="JobOrderHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupLoadingPort">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupLoadingPort">
+        <MappingFragment StoreEntitySet="iffsLupLoadingPort">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupPortOfDestination">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupPortOfDestination">
+        <MappingFragment StoreEntitySet="iffsLupPortOfDestination">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupPortOfOrigin">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupPortOfOrigin">
+        <MappingFragment StoreEntitySet="iffsLupPortOfOrigin">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coreUserRole">
+      <EntityTypeMapping TypeName="ErpModel.coreUserRole">
+        <MappingFragment StoreEntitySet="coreUserRole">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsServiceRequestDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsServiceRequestDetail">
+        <MappingFragment StoreEntitySet="iffsServiceRequestDetail">
+          <ScalarProperty Name="TareWeight" ColumnName="TareWeight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="POD" ColumnName="POD" />
+          <ScalarProperty Name="POE" ColumnName="POE" />
+          <ScalarProperty Name="ContainerTypeId" ColumnName="ContainerTypeId" />
+          <ScalarProperty Name="Pcs" ColumnName="Pcs" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="CommodityTypeId" ColumnName="CommodityTypeId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperationExpense">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperationExpense">
+        <MappingFragment StoreEntitySet="iffsOperationExpense">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ExpenseTypeId" ColumnName="ExpenseTypeId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsServiceRate">
+      <EntityTypeMapping TypeName="ErpModel.iffsServiceRate">
+        <MappingFragment StoreEntitySet="iffsServiceRate">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ComparingSign" ColumnName="ComparingSign" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="ServiceUnitTypeId" ColumnName="ServiceUnitTypeId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsService">
+      <EntityTypeMapping TypeName="ErpModel.iffsService">
+        <MappingFragment StoreEntitySet="iffsService">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsTaxable" ColumnName="IsTaxable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderHeader">
+        <MappingFragment StoreEntitySet="iffsJobOrderHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRequiredDocumentsSubmited" ColumnName="IsRequiredDocumentsSubmited" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ContactPersonForeign" ColumnName="ContactPersonForeign" />
+          <ScalarProperty Name="ContactPersonLocal" ColumnName="ContactPersonLocal" />
+          <ScalarProperty Name="ReceivingClient" ColumnName="ReceivingClient" />
+          <ScalarProperty Name="UltimateClient" ColumnName="UltimateClient" />
+          <ScalarProperty Name="ValidityDate" ColumnName="ValidityDate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ParentJobOrderId" ColumnName="ParentJobOrderId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="JobOrderNo" ColumnName="JobOrderNo" />
+          <ScalarProperty Name="Quotations" ColumnName="Quotations" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsJobOrderHistoryHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsJobOrderHistoryHeader">
+        <MappingFragment StoreEntitySet="iffsJobOrderHistoryHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsRequiredDocumentsSubmited" ColumnName="IsRequiredDocumentsSubmited" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ContactPersonForeign" ColumnName="ContactPersonForeign" />
+          <ScalarProperty Name="ContactPersonLocal" ColumnName="ContactPersonLocal" />
+          <ScalarProperty Name="ReceivingClient" ColumnName="ReceivingClient" />
+          <ScalarProperty Name="UltimateClient" ColumnName="UltimateClient" />
+          <ScalarProperty Name="ValidityDate" ColumnName="ValidityDate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ParentJobOrderId" ColumnName="ParentJobOrderId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="JobOrderNo" ColumnName="JobOrderNo" />
+          <ScalarProperty Name="Quotations" ColumnName="Quotations" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupOperationOpeningLocation">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupOperationOpeningLocation">
+        <MappingFragment StoreEntitySet="iffsLupOperationOpeningLocation">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperationStatus">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperationStatus">
+        <MappingFragment StoreEntitySet="iffsOperationStatus">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsOperation">
+      <EntityTypeMapping TypeName="ErpModel.iffsOperation">
+        <MappingFragment StoreEntitySet="iffsOperation">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="LoadingAir" ColumnName="LoadingAir" />
+          <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="HAWBNo" ColumnName="HAWBNo" />
+          <ScalarProperty Name="MAWBNo" ColumnName="MAWBNo" />
+          <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+          <ScalarProperty Name="BoxFile" ColumnName="BoxFile" />
+          <ScalarProperty Name="CargoAgentId" ColumnName="CargoAgentId" />
+          <ScalarProperty Name="MarketingOfficerId" ColumnName="MarketingOfficerId" />
+          <ScalarProperty Name="FinanceOfficerId" ColumnName="FinanceOfficerId" />
+          <ScalarProperty Name="TransitorId" ColumnName="TransitorId" />
+          <ScalarProperty Name="OperationManagerId" ColumnName="OperationManagerId" />
+          <ScalarProperty Name="LoadingPortId" ColumnName="LoadingPortId" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="NumberOfPackages" ColumnName="NumberOfPackages" />
+          <ScalarProperty Name="NumberOfContainers" ColumnName="NumberOfContainers" />
+          <ScalarProperty Name="PortDischargeDate" ColumnName="PortDischargeDate" />
+          <ScalarProperty Name="ETAPort" ColumnName="ETAPort" />
+          <ScalarProperty Name="OpeningLocationId" ColumnName="OpeningLocationId" />
+          <ScalarProperty Name="PortOfDestinationId" ColumnName="PortOfDestinationId" />
+          <ScalarProperty Name="PortOfOriginId" ColumnName="PortOfOriginId" />
+          <ScalarProperty Name="Voyage" ColumnName="Voyage" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="SSLine" ColumnName="SSLine" />
+          <ScalarProperty Name="HBLNo" ColumnName="HBLNo" />
+          <ScalarProperty Name="MBLNo" ColumnName="MBLNo" />
+          <ScalarProperty Name="GoodsDescription" ColumnName="GoodsDescription" />
+          <ScalarProperty Name="ClientReferenceNo" ColumnName="ClientReferenceNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="OperationNo" ColumnName="OperationNo" />
+          <ScalarProperty Name="JobOrderId" ColumnName="JobOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsServiceAgreement">
+      <EntityTypeMapping TypeName="ErpModel.iffsServiceAgreement">
+        <MappingFragment StoreEntitySet="iffsServiceAgreement">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AgreementFile" ColumnName="AgreementFile" />
+          <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AgreementNo" ColumnName="AgreementNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsContainer">
+      <EntityTypeMapping TypeName="ErpModel.iffsContainer">
+        <MappingFragment StoreEntitySet="iffsContainer">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Charge40" ColumnName="Charge40" />
+          <ScalarProperty Name="Charge20" ColumnName="Charge20" />
+          <ScalarProperty Name="GracePeriod" ColumnName="GracePeriod" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ContainerTypeId" ColumnName="ContainerTypeId" />
+          <ScalarProperty Name="ContainerNo" ColumnName="ContainerNo" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsContainerStatusTemplate">
+      <EntityTypeMapping TypeName="ErpModel.iffsContainerStatusTemplate">
+        <MappingFragment StoreEntitySet="iffsContainerStatusTemplate">
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="DataTypeId" ColumnName="DataTypeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContainerStatusType" ColumnName="ContainerStatusType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsContainerStatus">
+      <EntityTypeMapping TypeName="ErpModel.iffsContainerStatus">
+        <MappingFragment StoreEntitySet="iffsContainerStatus">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="ContainerId" ColumnName="ContainerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsQuotationTermandCondition">
+      <EntityTypeMapping TypeName="ErpModel.iffsQuotationTermandCondition">
+        <MappingFragment StoreEntitySet="iffsQuotationTermandCondition">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TermsAndConditions" ColumnName="TermsAndConditions" />
+          <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsQuotationHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsQuotationHeader">
+        <MappingFragment StoreEntitySet="iffsQuotationHeader">
+          <ScalarProperty Name="PrevQuotationNumber" ColumnName="PrevQuotationNumber" />
+          <ScalarProperty Name="PrevQuotationId" ColumnName="PrevQuotationId" />
+          <ScalarProperty Name="CustomerResponseRemark" ColumnName="CustomerResponseRemark" />
+          <ScalarProperty Name="IsAccepted" ColumnName="IsAccepted" />
+          <ScalarProperty Name="CustomerResponseDate" ColumnName="CustomerResponseDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ValidityDate" ColumnName="ValidityDate" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ParentQuotationId" ColumnName="ParentQuotationId" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ServiceRequestId" ColumnName="ServiceRequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsServiceRequest">
+      <EntityTypeMapping TypeName="ErpModel.iffsServiceRequest">
+        <MappingFragment StoreEntitySet="iffsServiceRequest">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ServiceAgreementId" ColumnName="ServiceAgreementId" />
+          <ScalarProperty Name="HasAgreement" ColumnName="HasAgreement" />
+          <ScalarProperty Name="ResponseDate" ColumnName="ResponseDate" />
+          <ScalarProperty Name="CanBeHandled" ColumnName="CanBeHandled" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="CommodityDescription" ColumnName="CommodityDescription" />
+          <ScalarProperty Name="CommodityType" ColumnName="CommodityType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RequesterLastName" ColumnName="RequesterLastName" />
+          <ScalarProperty Name="RequesterFirstName" ColumnName="RequesterFirstName" />
+          <ScalarProperty Name="RequestNo" ColumnName="RequestNo" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsInvoiceDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsInvoiceDetail">
+        <MappingFragment StoreEntitySet="iffsInvoiceDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ServiceUnitTypeId" ColumnName="ServiceUnitTypeId" />
+          <ScalarProperty Name="ServiceDescription" ColumnName="ServiceDescription" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsInvoiceOperation">
+      <EntityTypeMapping TypeName="ErpModel.iffsInvoiceOperation">
+        <MappingFragment StoreEntitySet="iffsInvoiceOperation">
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="InvoiceHeaderId" ColumnName="InvoiceHeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsInvoiceHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsInvoiceHeader">
+        <MappingFragment StoreEntitySet="iffsInvoiceHeader">
+          <ScalarProperty Name="WithHoldingApplied" ColumnName="WithHoldingApplied" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="NoofContainer" ColumnName="NoofContainer" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="OperationNo" ColumnName="OperationNo" />
+          <ScalarProperty Name="BL_AWB" ColumnName="BL_AWB" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="HBL" ColumnName="HBL" />
+          <ScalarProperty Name="FsNo" ColumnName="FsNo" />
+          <ScalarProperty Name="CustomerReferenceNo" ColumnName="CustomerReferenceNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="OperationTypeId" ColumnName="OperationTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsCrateAndBoxRequestDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsCrateAndBoxRequestDetail">
+        <MappingFragment StoreEntitySet="iffsCrateAndBoxRequestDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MeasurmentId" ColumnName="MeasurmentId" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BoxType" ColumnName="BoxType" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsCrateAndBoxRequestHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsCrateAndBoxRequestHeader">
+        <MappingFragment StoreEntitySet="iffsCrateAndBoxRequestHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="HasPrevOrderNumber" ColumnName="HasPrevOrderNumber" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsIronSheetCover" ColumnName="IsIronSheetCover" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+          <ScalarProperty Name="ExpectedDelivery" ColumnName="ExpectedDelivery" />
+          <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+          <ScalarProperty Name="PrevOrderNumber" ColumnName="PrevOrderNumber" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupBoxType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupBoxType">
+        <MappingFragment StoreEntitySet="iffsLupBoxType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupClientStatus">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupClientStatus">
+        <MappingFragment StoreEntitySet="iffsLupClientStatus">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupDamageType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupDamageType">
+        <MappingFragment StoreEntitySet="iffsLupDamageType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupRoomType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupRoomType">
+        <MappingFragment StoreEntitySet="iffsLupRoomType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsLupTruckType">
+      <EntityTypeMapping TypeName="ErpModel.iffsLupTruckType">
+        <MappingFragment StoreEntitySet="iffsLupTruckType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingCrateAndBoxConsumption">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingCrateAndBoxConsumption">
+        <MappingFragment StoreEntitySet="iffsPackingCrateAndBoxConsumption">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Consumed" ColumnName="Consumed" />
+          <ScalarProperty Name="Returned" ColumnName="Returned" />
+          <ScalarProperty Name="Requested" ColumnName="Requested" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CrateAndBoxDetailId" ColumnName="CrateAndBoxDetailId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingDamageReportDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingDamageReportDetail">
+        <MappingFragment StoreEntitySet="iffsPackingDamageReportDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DamageType" ColumnName="DamageType" />
+          <ScalarProperty Name="DamagedItems" ColumnName="DamagedItems" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingDamageReportHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingDamageReportHeader">
+        <MappingFragment StoreEntitySet="iffsPackingDamageReportHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="OriginCountry" ColumnName="OriginCountry" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="ShippersName" ColumnName="ShippersName" />
+          <ScalarProperty Name="SuprvisorId" ColumnName="SuprvisorId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingDetail">
+        <MappingFragment StoreEntitySet="iffsPackingDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PackersId" ColumnName="PackersId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingHeader">
+        <MappingFragment StoreEntitySet="iffsPackingHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OtherRelatedCost" ColumnName="OtherRelatedCost" />
+          <ScalarProperty Name="LunchProvided" ColumnName="LunchProvided" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="NumberofStaff" ColumnName="NumberofStaff" />
+          <ScalarProperty Name="ActualWeight" ColumnName="ActualWeight" />
+          <ScalarProperty Name="ActualVolume" ColumnName="ActualVolume" />
+          <ScalarProperty Name="EstimatedVolume" ColumnName="EstimatedVolume" />
+          <ScalarProperty Name="SupervisorId" ColumnName="SupervisorId" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingList">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingList">
+        <MappingFragment StoreEntitySet="iffsPackingList">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LabelId" ColumnName="LabelId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CrateNumber" ColumnName="CrateNumber" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="CartonNumber" ColumnName="CartonNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingMaterialConsumption">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingMaterialConsumption">
+        <MappingFragment StoreEntitySet="iffsPackingMaterialConsumption">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Consumed" ColumnName="Consumed" />
+          <ScalarProperty Name="Returned" ColumnName="Returned" />
+          <ScalarProperty Name="Requested" ColumnName="Requested" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PackingMaterialId" ColumnName="PackingMaterialId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingMaterialDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingMaterialDetail">
+        <MappingFragment StoreEntitySet="iffsPackingMaterialDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="MeasurmentUnit" ColumnName="MeasurmentUnit" />
+          <ScalarProperty Name="GRNNumber" ColumnName="GRNNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingMaterialHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingMaterialHeader">
+        <MappingFragment StoreEntitySet="iffsPackingMaterialHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="ApprovedById" ColumnName="ApprovedById" />
+          <ScalarProperty Name="CheckedDate" ColumnName="CheckedDate" />
+          <ScalarProperty Name="CheckedById" ColumnName="CheckedById" />
+          <ScalarProperty Name="PreparedDate" ColumnName="PreparedDate" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ToDept" ColumnName="ToDept" />
+          <ScalarProperty Name="RequestedDept" ColumnName="RequestedDept" />
+          <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingStaff">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingStaff">
+        <MappingFragment StoreEntitySet="iffsPackingStaff">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingTruckAndMachine">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingTruckAndMachine">
+        <MappingFragment StoreEntitySet="iffsPackingTruckAndMachine">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="EstimatedKmCovered" ColumnName="EstimatedKmCovered" />
+          <ScalarProperty Name="NumberOfTrip" ColumnName="NumberOfTrip" />
+          <ScalarProperty Name="TruckType" ColumnName="TruckType" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsReceivingClient">
+      <EntityTypeMapping TypeName="ErpModel.iffsReceivingClient">
+        <MappingFragment StoreEntitySet="iffsReceivingClient">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="AlternativeEmail" ColumnName="AlternativeEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsShipmentType">
+      <EntityTypeMapping TypeName="ErpModel.iffsShipmentType">
+        <MappingFragment StoreEntitySet="iffsShipmentType">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsSurveyRequest">
+      <EntityTypeMapping TypeName="ErpModel.iffsSurveyRequest">
+        <MappingFragment StoreEntitySet="iffsSurveyRequest">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="IsRailWay" ColumnName="IsRailWay" />
+          <ScalarProperty Name="IsOcean" ColumnName="IsOcean" />
+          <ScalarProperty Name="IsAir" ColumnName="IsAir" />
+          <ScalarProperty Name="RailWayId" ColumnName="RailWayId" />
+          <ScalarProperty Name="ShippingLineId" ColumnName="ShippingLineId" />
+          <ScalarProperty Name="AirLineId" ColumnName="AirLineId" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SurveyReportDate" ColumnName="SurveyReportDate" />
+          <ScalarProperty Name="AdditionalInstruction" ColumnName="AdditionalInstruction" />
+          <ScalarProperty Name="HandlingAgent" ColumnName="HandlingAgent" />
+          <ScalarProperty Name="MeasurmentUnit" ColumnName="MeasurmentUnit" />
+          <ScalarProperty Name="ClientAllowanceVolume" ColumnName="ClientAllowanceVolume" />
+          <ScalarProperty Name="DestinationCityCountry" ColumnName="DestinationCityCountry" />
+          <ScalarProperty Name="OriginCity" ColumnName="OriginCity" />
+          <ScalarProperty Name="ProposedPackingDate" ColumnName="ProposedPackingDate" />
+          <ScalarProperty Name="SurveyLocation" ColumnName="SurveyLocation" />
+          <ScalarProperty Name="ProposedSurveyDate" ColumnName="ProposedSurveyDate" />
+          <ScalarProperty Name="ReceivingClientId" ColumnName="ReceivingClientId" />
+          <ScalarProperty Name="OrderingClientId" ColumnName="OrderingClientId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsSurveyServiceRequest">
+      <EntityTypeMapping TypeName="ErpModel.iffsSurveyServiceRequest">
+        <MappingFragment StoreEntitySet="iffsSurveyServiceRequest">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PackingSurveyId" ColumnName="PackingSurveyId" />
+          <ScalarProperty Name="ServiceRequestId" ColumnName="ServiceRequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lupMeasurementUnit">
+      <EntityTypeMapping TypeName="ErpModel.lupMeasurementUnit">
+        <MappingFragment StoreEntitySet="lupMeasurementUnit">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsSchedule">
+      <EntityTypeMapping TypeName="ErpModel.iffsSchedule">
+        <MappingFragment StoreEntitySet="iffsSchedule">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="IsAllDAy" ColumnName="IsAllDAy" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ScheduleType" ColumnName="ScheduleType" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="PreparedById" ColumnName="PreparedById" />
+          <ScalarProperty Name="ScheduleTypeId" ColumnName="ScheduleTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingListSetting">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingListSetting">
+        <MappingFragment StoreEntitySet="iffsPackingListSetting">
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingSurveyDetail">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingSurveyDetail">
+        <MappingFragment StoreEntitySet="iffsPackingSurveyDetail">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RoomTypeId" ColumnName="RoomTypeId" />
+          <ScalarProperty Name="HeaderId" ColumnName="HeaderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingSurveyHeader">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingSurveyHeader">
+        <MappingFragment StoreEntitySet="iffsPackingSurveyHeader">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CBMOcean" ColumnName="CBMOcean" />
+          <ScalarProperty Name="CBMAir" ColumnName="CBMAir" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="IsDoorToPort" ColumnName="IsDoorToPort" />
+          <ScalarProperty Name="IsDoorToDoor" ColumnName="IsDoorToDoor" />
+          <ScalarProperty Name="IsOcean" ColumnName="IsOcean" />
+          <ScalarProperty Name="IsAir" ColumnName="IsAir" />
+          <ScalarProperty Name="IsCustomClearance" ColumnName="IsCustomClearance" />
+          <ScalarProperty Name="IsMoving" ColumnName="IsMoving" />
+          <ScalarProperty Name="IsPacking" ColumnName="IsPacking" />
+          <ScalarProperty Name="EstimatedStuffQty" ColumnName="EstimatedStuffQty" />
+          <ScalarProperty Name="PackingDate" ColumnName="PackingDate" />
+          <ScalarProperty Name="DepartureDate" ColumnName="DepartureDate" />
+          <ScalarProperty Name="SurveyDate" ColumnName="SurveyDate" />
+          <ScalarProperty Name="DestinationPort" ColumnName="DestinationPort" />
+          <ScalarProperty Name="DestinationAddress" ColumnName="DestinationAddress" />
+          <ScalarProperty Name="DestinationCountry" ColumnName="DestinationCountry" />
+          <ScalarProperty Name="ClientStatusId" ColumnName="ClientStatusId" />
+          <ScalarProperty Name="SurveyedById" ColumnName="SurveyedById" />
+          <ScalarProperty Name="SurveyRequestId" ColumnName="SurveyRequestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingMaterialList">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingMaterialList">
+        <MappingFragment StoreEntitySet="iffsPackingMaterialList">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MaterialType" ColumnName="MaterialType" />
+          <ScalarProperty Name="SizeCMB" ColumnName="SizeCMB" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="MeasurmentUnit" ColumnName="MeasurmentUnit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ifmsSetting">
+      <EntityTypeMapping TypeName="ErpModel.ifmsSetting">
+        <MappingFragment StoreEntitySet="ifmsSetting">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DefaultCostCenterId" ColumnName="DefaultCostCenterId" />
+          <ScalarProperty Name="ClosingCapitalAccountId" ColumnName="ClosingCapitalAccountId" />
+          <ScalarProperty Name="IncomeSummaryAccountId" ColumnName="IncomeSummaryAccountId" />
+          <ScalarProperty Name="CurrentPeriodId" ColumnName="CurrentPeriodId" />
+          <ScalarProperty Name="CurrentFiscalYearId" ColumnName="CurrentFiscalYearId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iffsPackingMaterial">
+      <EntityTypeMapping TypeName="ErpModel.iffsPackingMaterial">
+        <MappingFragment StoreEntitySet="iffsPackingMaterial">
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

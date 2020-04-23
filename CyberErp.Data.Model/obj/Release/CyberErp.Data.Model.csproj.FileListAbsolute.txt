@@ -1,0 +1,30 @@
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll.config
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.pdb
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.dll
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.xml
+D:\TFS\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.xml
+D:\TFS\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.csprojResolveAssemblyReference.cache
+D:\TFS\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.dll
+D:\TFS\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll.config
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.csprojResolveAssemblyReference.cache
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll.config
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\CyberErp.Data.Model.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\bin\Release\EntityFramework.SqlServer.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.csprojResolveAssemblyReference.cache
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Model\obj\Release\CyberErp.Data.Model.pdb

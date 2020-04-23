@@ -1,0 +1,238 @@
+﻿.icon-key {
+    background-image: url(../../images/app/key.png) !important;
+}
+.icon-accept {
+    background-image: url(../../images/app/accept.png) !important;
+}
+.icon-add {
+    background-image: url(../../images/app/add.png) !important;
+}
+.icon-browse {
+    background-image: url(../../images/app/search.png) !important;
+}
+.icon-crop {
+    background-image: url(../../images/app/crop.gif) !important;
+}
+.icon-edit {
+    background-image: url(../../images/app/page_white_edit.png) !important;
+}
+.icon-delete {
+    background-image: url(../../images/app/delete.png) !important;
+}
+.icon-save {
+    background-image: url(../../images/app/disk.png) !important;
+}
+.icon-exit {
+    background-image: url(../../images/app/cancel.png) !important;
+}
+
+.icon-upload {
+    background-image: url(../../images/app/image_add.png) !important;
+}
+
+.icon-home {
+    background-image: url(../../images/app/home.png) !important;
+}
+
+.icon-module {
+    background-image: url(../../images/app/module.png) !important;
+}
+
+.icon-operation {
+    background-image: url(../../images/app/operation.png) !important;
+}
+
+.icon-menu {
+    background-image: url(../../images/app/menu.png) !important;
+}
+
+.icon-member {
+    background-image: url(../../images/app/member.png) !important;
+}
+
+.icon-permission {
+    background-image: url(../../images/app/permission.png) !important;
+}
+
+.icon-preview {
+    background-image: url(../../images/app/preview.png) !important;
+}
+
+.icon-role {
+    background-image: url(../../images/app/role.png) !important;
+}
+
+.icon-subsystem {
+    background-image: url(../../images/app/subsystem.png) !important;
+}
+
+.icon-hierarchy {
+    background-image: url(../../images/app/hierarchy.png) !important;
+}
+
+.icon-search {
+    background-image: url(../../images/app/search.png) !important;
+}
+
+.icon-filter {
+    background-image: url(../../images/app/filter.png) !important;
+}
+
+.icon-information {
+    background-image: url(../../images/app/information.png) !important;
+}
+
+.icon-unit {
+    background-image: url(../../images/app/folder-vertical.png) !important;
+}
+.icon-upload {
+    background-image: url(../../images/app/upload.png) !important;
+}
+
+.icon-jobgrade {
+    background-image: url(../../images/app/jobgrade.png) !important;
+}
+
+.icon-salaryscale {
+    background-image: url(../../images/app/salaryscale.png) !important;
+}
+
+.icon-positionclass {
+    background-image: url(../../images/app/positionclass.png) !important;
+}
+
+.icon-position {
+    background-image: url(../../images/app/position.png) !important;
+}
+
+.icon-professioncategory {
+    background-image: url(../../images/app/professioncategory.png) !important;
+}
+
+.icon-payrollitem {
+    background-image: url(../../images/app/payrollitem.png) !important;
+}
+
+.icon-expand-all {
+    background-image: url(../../images/app/expand-all.gif) !important;
+}
+
+.icon-collapse-all {
+    background-image: url(../../images/app/collapse-all.gif) !important;
+}
+
+.icon-benefit {
+    background-image: url(../../images/app/benefit.png) !important;
+}
+
+.icon-education {
+    background-image: url(../../images/app/education.png) !important;
+}
+
+.icon-refresh {
+    background-image: url(../../images/app/refresh.gif) !important;
+}
+
+.icon-select {
+    background-image: url(../../images/app/select.png) !important;
+}
+
+.icon-experience {
+    background-image: url(../../images/app/experience.png) !important;
+}
+
+.icon-transfer {
+    background-image: url(../../images/app/transfer.png) !important;
+}
+
+.icon-calculate {
+    background-image: url(../../images/app/calculate.png) !important;
+}
+
+.icon-view {
+    background-image: url(../../images/app/view.png) !important;
+}
+
+.icon-green-bullet {
+    background-image: url(../../images/app/bullet-green.png) !important;
+}
+.x-tree-node-collapsed .x-tree-node-icon 
+{ 
+    background-image: url(../../images/app/folder_go.png) !important; 
+    background-repeat: no-repeat; 
+} 
+
+.x-tree-node-expanded .x-tree-node-icon 
+{ 
+    background-image: url(../../images/app/folder.png) !important; 
+    background-repeat: no-repeat; 
+}
+
+.icon-printer {
+    background-image: url(../../images/app/printer.png) !important;
+}
+
+.icon-first {
+    background-image: url(../../images/app/resultset_first.png) !important;
+}
+
+.icon-prev {
+    background-image: url(../../images/app/resultset_previous.png) !important;
+}
+
+.icon-last {
+    background-image: url(../../images/app/resultset_last.png) !important;
+}
+
+.icon-next {
+    background-image: url(../../images/app/resultset_next.png) !important;
+}
+
+.icon-cancel {
+    background-image: url(../../images/app/cancel.png) !important;
+}
+
+.icon-select {
+    background-image: url(../../images/app/select.png) !important;
+}
+
+.icon-refresh {
+    background-image: url(../../images/app/refresh.gif) !important;
+}
+
+.icon-preview {
+    background-image: url(../../images/app/preview.png) !important;
+}
+
+.icon-yes {
+    background-image: url(../../images/app/yes.png) !important;
+}
+
+.icon-no {
+    background-image: url(../../images/app/no.png) !important;
+}
+
+.icon-setting {
+    background-image: url(../../images/app/settings.png);
+}
+
+.icon-excel {
+    background-image: url(../../images/app/page_white_excel.png) !important;
+    background-repeat: no-repeat;
+    color: #333333;
+    display: inline-block;
+    height: 14px;
+    padding-left: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+}
+.icon-notification {
+    background-image: url(../../images/app/notification.png);
+}
+
+.icon-undo {
+    background-image: url(../../images/app/arrow_undo.png);
+}
+.icon-redo {
+    background-image: url(../../images/app/arrow_redo.png);
+}

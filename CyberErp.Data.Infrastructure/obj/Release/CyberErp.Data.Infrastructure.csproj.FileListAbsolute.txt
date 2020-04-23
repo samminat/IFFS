@@ -1,0 +1,20 @@
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.dll.config
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.pdb
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.SqlServer.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.xml
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.SqlServer.xml
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.dll.config
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\CyberErp.Data.Infrastructure.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.SqlServer.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\bin\Release\EntityFramework.SqlServer.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Data.Infrastructure\obj\Release\CyberErp.Data.Infrastructure.pdb

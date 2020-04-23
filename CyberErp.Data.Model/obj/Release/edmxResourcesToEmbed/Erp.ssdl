@@ -1,0 +1,2664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ErpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="coreModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubsystemId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModuleId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsMenu" Type="bit" Nullable="false" />
+    <Property Name="Href" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IconCls" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corePerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstNameA" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FatherNameA" Type="nvarchar" MaxLength="50" />
+    <Property Name="GrandFatherName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GrandFatherNameA" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenderId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corePosition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PositionClassId" Type="int" Nullable="false" />
+    <Property Name="UnitId" Type="int" Nullable="false" />
+    <Property Name="IsVacant" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corePositionClass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="SalaryScaleId" Type="int" Nullable="false" />
+    <Property Name="PreferredGenderId" Type="int" Nullable="false" />
+    <Property Name="MinimumAge" Type="int" />
+    <Property Name="MaximumAge" Type="int" />
+    <Property Name="MonthlyWorkingHours" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreRolePermission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="OperationId" Type="int" Nullable="false" />
+    <Property Name="CanAdd" Type="bit" Nullable="false" />
+    <Property Name="CanEdit" Type="bit" Nullable="false" />
+    <Property Name="CanDelete" Type="bit" Nullable="false" />
+    <Property Name="CanView" Type="bit" Nullable="false" />
+    <Property Name="CanApprove" Type="bit" Nullable="false" />
+    <Property Name="CanCertify" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreSubsystem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsRevoked" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreUserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="coreUserSubsystem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SubsystemId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hrmsEmployee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="SubsidiaryAccountId" Type="int" />
+    <Property Name="IdentityNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NationalityId" Type="int" Nullable="false" />
+    <Property Name="MaritalStatusId" Type="int" Nullable="false" />
+    <Property Name="ReligionId" Type="int" Nullable="false" />
+    <Property Name="EthnicityId" Type="int" Nullable="false" />
+    <Property Name="EmploymentTypeId" Type="int" Nullable="false" />
+    <Property Name="EmploymentNatureId" Type="int" Nullable="false" />
+    <Property Name="PositionId" Type="int" Nullable="false" />
+    <Property Name="SalaryScaleId" Type="int" Nullable="false" />
+    <Property Name="PrevSalary" Type="money" />
+    <Property Name="Salary" Type="money" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="MotherFullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BirthLocation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmploymentDate" Type="datetime" Nullable="false" />
+    <Property Name="PensionNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RetirementDate" Type="datetime" Nullable="false" />
+    <Property Name="HasBirthCertificate" Type="bit" Nullable="false" />
+    <Property Name="HasMarriageCertificate" Type="bit" Nullable="false" />
+    <Property Name="IsUnderProbation" Type="bit" Nullable="false" />
+    <Property Name="IsTerminated" Type="bit" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="FundTypeId" Type="int" />
+    <Property Name="ProbationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="iffsApprover">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsContainer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationId" Type="int" Nullable="false" />
+    <Property Name="ContainerNo" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContainerTypeId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="NetWeight" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="GracePeriod" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Charge20" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Charge40" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Length" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Height" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsContainerStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContainerId" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsContainerStatusTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" />
+    <Property Name="ContainerStatusType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="DataTypeId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerGroupId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TinNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="text" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsDocumentNoSetting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SurFix" Type="nvarchar" MaxLength="50" />
+    <Property Name="Year" Type="int" />
+    <Property Name="CurrentNo" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="NoOfDigit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsInvoiceDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceId" Type="int" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="ServiceDescription" Type="nvarchar(max)" />
+    <Property Name="ServiceUnitTypeId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsInvoiceHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerReferenceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentMode" Type="nvarchar" MaxLength="50" />
+    <Property Name="FsNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="WithHoldingApplied" Type="bit" Nullable="false" />
+    <Property Name="HBL" Type="nvarchar(max)" />
+    <Property Name="Carrier" Type="nvarchar(max)" />
+    <Property Name="BL_AWB" Type="nvarchar(max)" />
+    <Property Name="OperationNo" Type="nvarchar(max)" />
+    <Property Name="Container" Type="nvarchar(max)" />
+    <Property Name="NoofContainer" Type="nvarchar(max)" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovalDate" Type="datetime" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="iffsInvoiceOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceHeaderId" Type="int" Nullable="false" />
+    <Property Name="OperationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobOrderHeaderId" Type="int" Nullable="false" />
+    <Property Name="FieldCategory" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Field" Type="nvarchar" MaxLength="150" />
+    <Property Name="Value" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobOrderHeaderId" Type="int" Nullable="false" />
+    <Property Name="DocumentTypeId" Type="int" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NoOfPagesOriginal" Type="int" Nullable="false" />
+    <Property Name="NoOfPagesCopy" Type="int" Nullable="false" />
+    <Property Name="NoOfAttachedPagesOriginal" Type="int" Nullable="false" />
+    <Property Name="NoOfAttachedPagesCopy" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="text" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quotations" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="JobOrderNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="ParentJobOrderId" Type="int" />
+    <Property Name="Version" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="UltimateClient" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ReceivingClient" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContactPersonLocal" Type="text" />
+    <Property Name="ContactPersonForeign" Type="text" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovalDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsViewed" Type="bit" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsRequiredDocumentsSubmited" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderHistoryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobOrderHeaderId" Type="int" Nullable="false" />
+    <Property Name="FieldCategory" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Field" Type="nvarchar" MaxLength="150" />
+    <Property Name="Value" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderHistoryHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quotations" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="JobOrderNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="ParentJobOrderId" Type="int" />
+    <Property Name="Version" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="UltimateClient" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ReceivingClient" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContactPersonLocal" Type="text" />
+    <Property Name="ContactPersonForeign" Type="text" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsViewed" Type="bit" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsRequiredDocumentsSubmited" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderQuotation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobOrderId" Type="int" Nullable="false" />
+    <Property Name="QuotationId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsJobOrderTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" />
+    <Property Name="FieldCategory" Type="nvarchar" MaxLength="150" />
+    <Property Name="Field" Type="nvarchar" MaxLength="150" />
+    <Property Name="DefaultValue" Type="text" />
+  </EntityType>
+  <EntityType Name="iffsLupCommodityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupContainerType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupCurrency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupCustomerGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupDataType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupDocumentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupExpenseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupLoadingPort">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupOperationOpeningLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupOperationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupPOE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupPortOfDestination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupPortOfOrigin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupServiceUnitType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupSizeUnitType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsLupWeightUnitType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Operation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ObjectId" Type="int" Nullable="false" />
+    <Property Name="ActorId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Message" Type="text" Nullable="false" />
+    <Property Name="IsViewed" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobOrderId" Type="int" Nullable="false" />
+    <Property Name="OperationNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="ClientReferenceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="GoodsDescription" Type="text" />
+    <Property Name="MBLNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="HBLNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSLine" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vessel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voyage" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortOfOriginId" Type="int" />
+    <Property Name="PortOfDestinationId" Type="int" />
+    <Property Name="OpeningLocationId" Type="int" />
+    <Property Name="ETAPort" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortDischargeDate" Type="datetime" />
+    <Property Name="NumberOfContainers" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfPackages" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LoadingPortId" Type="int" />
+    <Property Name="OperationManagerId" Type="int" />
+    <Property Name="TransitorId" Type="int" />
+    <Property Name="FinanceOfficerId" Type="int" />
+    <Property Name="MarketingOfficerId" Type="int" />
+    <Property Name="CargoAgentId" Type="int" />
+    <Property Name="BoxFile" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="MAWBNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="HAWBNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Carrier" Type="nvarchar" MaxLength="50" />
+    <Property Name="FlightNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoadingAir" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETD" Type="datetime" />
+    <Property Name="ETA" Type="datetime" />
+    <Property Name="Remarks" Type="text" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovalDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperationDocumentTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="DocumentTypeId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperationExpense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationId" Type="int" Nullable="false" />
+    <Property Name="ExpenseTypeId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperationExpenseTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="ExpenseTypeId" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperationStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationId" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsOperationStatusTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="DataTypeId" Type="int" Nullable="false" />
+    <Property Name="PlannedDuration" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsQuotationDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuotationId" Type="int" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="ServiceRequestDetailId" Type="int" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="ServiceDescription" Type="nvarchar(max)" />
+    <Property Name="ServiceUnitTypeId" Type="int" Nullable="false" />
+    <Property Name="ComparingSign" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsQuotationHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceRequestId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="QuotationNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentQuotationId" Type="int" />
+    <Property Name="Version" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValidityDate" Type="datetime" Nullable="false" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovalDate" Type="datetime" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="CustomerResponseDate" Type="datetime" />
+    <Property Name="IsAccepted" Type="bit" Nullable="false" />
+    <Property Name="CustomerResponseRemark" Type="nvarchar(max)" />
+    <Property Name="PrevQuotationId" Type="int" />
+    <Property Name="PrevQuotationNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="iffsQuotationTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" />
+    <Property Name="ServiceId" Type="int" />
+  </EntityType>
+  <EntityType Name="iffsQuotationTermandCondition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuotationId" Type="int" Nullable="false" />
+    <Property Name="TermsAndConditions" Type="text" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsRoleSetting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsTaxable" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsServiceAgreement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AgreementNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="QuotationId" Type="int" />
+    <Property Name="AgreementFile" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="text" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsServiceRate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" />
+    <Property Name="ServiceUnitTypeId" Type="int" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="ComparingSign" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsServiceRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="RequestDate" Type="datetime" Nullable="false" />
+    <Property Name="RequestNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RequesterFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RequesterLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="CommodityType" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommodityDescription" Type="text" Nullable="false" />
+    <Property Name="PreparedById" Type="int" Nullable="false" />
+    <Property Name="PreparedDate" Type="datetime" Nullable="false" />
+    <Property Name="CheckedById" Type="int" />
+    <Property Name="CheckedDate" Type="datetime" />
+    <Property Name="ApprovedById" Type="int" />
+    <Property Name="ApprovalDate" Type="datetime" />
+    <Property Name="CanBeHandled" Type="bit" Nullable="false" />
+    <Property Name="ResponseDate" Type="datetime" />
+    <Property Name="HasAgreement" Type="bit" Nullable="false" />
+    <Property Name="ServiceAgreementId" Type="int" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsServiceRequestDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeaderId" Type="int" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommodityTypeId" Type="int" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Pcs" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContainerTypeId" Type="int" />
+    <Property Name="POE" Type="nvarchar" MaxLength="50" />
+    <Property Name="POD" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="TareWeight" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="iffsServiceRequestDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestId" Type="int" Nullable="false" />
+    <Property Name="DocumentUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsTermsAndConditionsTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iffsUserOperationTypeMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OperationTypeId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastUpdated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_coreModule_coreSubsystem">
+    <End Role="coreSubsystem" Type="Self.coreSubsystem" Multiplicity="1" />
+    <End Role="coreModule" Type="Self.coreModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreSubsystem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreModule">
+        <PropertyRef Name="SubsystemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreOperation_coreModule">
+    <End Role="coreModule" Type="Self.coreModule" Multiplicity="1" />
+    <End Role="coreOperation" Type="Self.coreOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreOperation">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_corePosition_corePositionClass">
+    <End Role="corePositionClass" Type="Self.corePositionClass" Multiplicity="1" />
+    <End Role="corePosition" Type="Self.corePosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="corePositionClass">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="corePosition">
+        <PropertyRef Name="PositionClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreRolePermission_coreOperation">
+    <End Role="coreOperation" Type="Self.coreOperation" Multiplicity="1" />
+    <End Role="coreRolePermission" Type="Self.coreRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreRolePermission">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreRolePermission_coreRole">
+    <End Role="coreRole" Type="Self.coreRole" Multiplicity="1" />
+    <End Role="coreRolePermission" Type="Self.coreRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreRolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreUserRole_coreRole">
+    <End Role="coreRole" Type="Self.coreRole" Multiplicity="1" />
+    <End Role="coreUserRole" Type="Self.coreUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreUserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreUserRole_coreUser">
+    <End Role="coreUser" Type="Self.coreUser" Multiplicity="1" />
+    <End Role="coreUserRole" Type="Self.coreUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreUserRole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreUserSubsystem_coreSubsystem">
+    <End Role="coreSubsystem" Type="Self.coreSubsystem" Multiplicity="1" />
+    <End Role="coreUserSubsystem" Type="Self.coreUserSubsystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreSubsystem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreUserSubsystem">
+        <PropertyRef Name="SubsystemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_coreUserSubsystem_coreUser">
+    <End Role="coreUser" Type="Self.coreUser" Multiplicity="1" />
+    <End Role="coreUserSubsystem" Type="Self.coreUserSubsystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="coreUserSubsystem">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_hrmsEmployee_corePerson">
+    <End Role="corePerson" Type="Self.corePerson" Multiplicity="1" />
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="corePerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="hrmsEmployee">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_hrmsEmployee_corePosition">
+    <End Role="corePosition" Type="Self.corePosition" Multiplicity="1" />
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="corePosition">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="hrmsEmployee">
+        <PropertyRef Name="PositionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsApprover_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsApprover" Type="Self.iffsApprover" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsApprover">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainer_iffsLupContainerType">
+    <End Role="iffsLupContainerType" Type="Self.iffsLupContainerType" Multiplicity="1" />
+    <End Role="iffsContainer" Type="Self.iffsContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupContainerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainer">
+        <PropertyRef Name="ContainerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainer_iffsLupCurrency">
+    <End Role="iffsLupCurrency" Type="Self.iffsLupCurrency" Multiplicity="0..1" />
+    <End Role="iffsContainer" Type="Self.iffsContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainer">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainer_iffsOperation">
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="1" />
+    <End Role="iffsContainer" Type="Self.iffsContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainer">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainerStatus_iffsContainer">
+    <End Role="iffsContainer" Type="Self.iffsContainer" Multiplicity="1" />
+    <End Role="iffsContainerStatus" Type="Self.iffsContainerStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsContainer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainerStatus">
+        <PropertyRef Name="ContainerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainerStatus_iffsContainerStatusTemplate">
+    <End Role="iffsContainerStatusTemplate" Type="Self.iffsContainerStatusTemplate" Multiplicity="1" />
+    <End Role="iffsContainerStatus" Type="Self.iffsContainerStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsContainerStatusTemplate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainerStatus">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainerStatusTemplate_coreRole">
+    <End Role="coreRole" Type="Self.coreRole" Multiplicity="1" />
+    <End Role="iffsContainerStatusTemplate" Type="Self.iffsContainerStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainerStatusTemplate">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainerStatusTemplate_iffsLupDataType">
+    <End Role="iffsLupDataType" Type="Self.iffsLupDataType" Multiplicity="1" />
+    <End Role="iffsContainerStatusTemplate" Type="Self.iffsContainerStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupDataType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainerStatusTemplate">
+        <PropertyRef Name="DataTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsContainerStatusTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="0..1" />
+    <End Role="iffsContainerStatusTemplate" Type="Self.iffsContainerStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsContainerStatusTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsCustomer_iffsLupCustomerGroup">
+    <End Role="iffsLupCustomerGroup" Type="Self.iffsLupCustomerGroup" Multiplicity="1" />
+    <End Role="iffsCustomer" Type="Self.iffsCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCustomerGroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsCustomer">
+        <PropertyRef Name="CustomerGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceDetail_iffsInvoiceHeader">
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="1" />
+    <End Role="iffsInvoiceDetail" Type="Self.iffsInvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsInvoiceHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceDetail_iffsLupCurrency">
+    <End Role="iffsLupCurrency" Type="Self.iffsLupCurrency" Multiplicity="1" />
+    <End Role="iffsInvoiceDetail" Type="Self.iffsInvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceDetail">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceDetail_iffsLupServiceUnitType">
+    <End Role="iffsLupServiceUnitType" Type="Self.iffsLupServiceUnitType" Multiplicity="1" />
+    <End Role="iffsInvoiceDetail" Type="Self.iffsInvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupServiceUnitType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceDetail">
+        <PropertyRef Name="ServiceUnitTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceDetail_iffsService">
+    <End Role="iffsService" Type="Self.iffsService" Multiplicity="1" />
+    <End Role="iffsInvoiceDetail" Type="Self.iffsInvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsService">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceDetail">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceHeader_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceHeader">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceHeader_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceHeader">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceHeader_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceHeader">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceHeader_iffsCustomer">
+    <End Role="iffsCustomer" Type="Self.iffsCustomer" Multiplicity="1" />
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceHeader">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceHeader_iffsInvoiceHeader1">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceHeader">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceOperation_iffsInvoiceHeader">
+    <End Role="iffsInvoiceHeader" Type="Self.iffsInvoiceHeader" Multiplicity="1" />
+    <End Role="iffsInvoiceOperation" Type="Self.iffsInvoiceOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsInvoiceHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceOperation">
+        <PropertyRef Name="InvoiceHeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsInvoiceOperation_iffsOperation">
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="1" />
+    <End Role="iffsInvoiceOperation" Type="Self.iffsInvoiceOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsInvoiceOperation">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderDetail_iffsJobOrderHeader">
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="1" />
+    <End Role="iffsJobOrderDetail" Type="Self.iffsJobOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsJobOrderHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderDetail">
+        <PropertyRef Name="JobOrderHeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderDocument_iffsJobOrderHeader">
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="1" />
+    <End Role="iffsJobOrderDocument" Type="Self.iffsJobOrderDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsJobOrderHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderDocument">
+        <PropertyRef Name="JobOrderHeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderDocument_iffsLupDocumentType">
+    <End Role="iffsLupDocumentType" Type="Self.iffsLupDocumentType" Multiplicity="1" />
+    <End Role="iffsJobOrderDocument" Type="Self.iffsJobOrderDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderDocument">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderExpense_iffsLupCurrency">
+    <End Role="iffsLupCurrency" Type="Self.iffsLupCurrency" Multiplicity="1" />
+    <End Role="iffsOperationExpense" Type="Self.iffsOperationExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationExpense">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderExpense_iffsLupExpenseType">
+    <End Role="iffsLupExpenseType" Type="Self.iffsLupExpenseType" Multiplicity="1" />
+    <End Role="iffsOperationExpense" Type="Self.iffsOperationExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupExpenseType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationExpense">
+        <PropertyRef Name="ExpenseTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHeader_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHeader">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHeader_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHeader">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHeader_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHeader">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHeader_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHeader">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHistoryDetail_iffsJobOrderHistoryHeader">
+    <End Role="iffsJobOrderHistoryHeader" Type="Self.iffsJobOrderHistoryHeader" Multiplicity="1" />
+    <End Role="iffsJobOrderHistoryDetail" Type="Self.iffsJobOrderHistoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsJobOrderHistoryHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHistoryDetail">
+        <PropertyRef Name="JobOrderHeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsJobOrderHistoryHeader" Type="Self.iffsJobOrderHistoryHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHistoryHeader">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsJobOrderHistoryHeader" Type="Self.iffsJobOrderHistoryHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHistoryHeader">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsJobOrderHistoryHeader" Type="Self.iffsJobOrderHistoryHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHistoryHeader">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderHistoryHeader_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsJobOrderHistoryHeader" Type="Self.iffsJobOrderHistoryHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderHistoryHeader">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderQuotation_iffsJobOrderHeader">
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="1" />
+    <End Role="iffsJobOrderQuotation" Type="Self.iffsJobOrderQuotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsJobOrderHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderQuotation">
+        <PropertyRef Name="JobOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderQuotation_iffsQuotationHeader">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="1" />
+    <End Role="iffsJobOrderQuotation" Type="Self.iffsJobOrderQuotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderQuotation">
+        <PropertyRef Name="QuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsJobOrderTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="0..1" />
+    <End Role="iffsJobOrderTemplate" Type="Self.iffsJobOrderTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsJobOrderTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee3">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="OperationManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee4">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="TransitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee5">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="FinanceOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee6">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="MarketingOfficerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_hrmsEmployee7">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="CargoAgentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_iffsJobOrderHeader">
+    <End Role="iffsJobOrderHeader" Type="Self.iffsJobOrderHeader" Multiplicity="1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsJobOrderHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="JobOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_iffsLupLoadingPort">
+    <End Role="iffsLupLoadingPort" Type="Self.iffsLupLoadingPort" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupLoadingPort">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="LoadingPortId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_iffsLupOperationOpeningLocation">
+    <End Role="iffsLupOperationOpeningLocation" Type="Self.iffsLupOperationOpeningLocation" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationOpeningLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="OpeningLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_iffsLupPortOfDestination">
+    <End Role="iffsLupPortOfDestination" Type="Self.iffsLupPortOfDestination" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupPortOfDestination">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="PortOfDestinationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperation_iffsLupPortOfOrigin">
+    <End Role="iffsLupPortOfOrigin" Type="Self.iffsLupPortOfOrigin" Multiplicity="0..1" />
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupPortOfOrigin">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperation">
+        <PropertyRef Name="PortOfOriginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationDocumentTemplate_iffsLupDocumentType">
+    <End Role="iffsLupDocumentType" Type="Self.iffsLupDocumentType" Multiplicity="1" />
+    <End Role="iffsOperationDocumentTemplate" Type="Self.iffsOperationDocumentTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationDocumentTemplate">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationDocumentTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsOperationDocumentTemplate" Type="Self.iffsOperationDocumentTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationDocumentTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationExpense_iffsOperation">
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="1" />
+    <End Role="iffsOperationExpense" Type="Self.iffsOperationExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationExpense">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationExpenseTemplate_iffsLupExpenseType">
+    <End Role="iffsLupExpenseType" Type="Self.iffsLupExpenseType" Multiplicity="1" />
+    <End Role="iffsOperationExpenseTemplate" Type="Self.iffsOperationExpenseTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupExpenseType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationExpenseTemplate">
+        <PropertyRef Name="ExpenseTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationExpenseTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsOperationExpenseTemplate" Type="Self.iffsOperationExpenseTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationExpenseTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationStatus_iffsOperation">
+    <End Role="iffsOperation" Type="Self.iffsOperation" Multiplicity="1" />
+    <End Role="iffsOperationStatus" Type="Self.iffsOperationStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationStatus">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsOperationStatusTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsOperationStatusTemplate" Type="Self.iffsOperationStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationStatusTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsLupCurrency">
+    <End Role="iffsLupCurrency" Type="Self.iffsLupCurrency" Multiplicity="1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsLupServiceUnitType">
+    <End Role="iffsLupServiceUnitType" Type="Self.iffsLupServiceUnitType" Multiplicity="1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupServiceUnitType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="ServiceUnitTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsQuotationHeader">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="QuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsService">
+    <End Role="iffsService" Type="Self.iffsService" Multiplicity="1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsService">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationDetail_iffsServiceRequestDetail">
+    <End Role="iffsServiceRequestDetail" Type="Self.iffsServiceRequestDetail" Multiplicity="0..1" />
+    <End Role="iffsQuotationDetail" Type="Self.iffsQuotationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsServiceRequestDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationDetail">
+        <PropertyRef Name="ServiceRequestDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_iffsQuotationHeader">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="0..1" />
+    <End Role="iffsQuotationHeader1" Type="Self.iffsQuotationHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader1">
+        <PropertyRef Name="ParentQuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_iffsQuotationHeader1">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="1" />
+    <End Role="iffsQuotationHeader1" Type="Self.iffsQuotationHeader" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationHeader_iffsServiceRequest">
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="1" />
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsServiceRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationHeader">
+        <PropertyRef Name="ServiceRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationTemplate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="0..1" />
+    <End Role="iffsQuotationTemplate" Type="Self.iffsQuotationTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationTemplate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationTemplate_iffsService">
+    <End Role="iffsService" Type="Self.iffsService" Multiplicity="0..1" />
+    <End Role="iffsQuotationTemplate" Type="Self.iffsQuotationTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsService">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationTemplate">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsQuotationTermandCondition_iffsQuotationHeader">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="1" />
+    <End Role="iffsQuotationTermandCondition" Type="Self.iffsQuotationTermandCondition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsQuotationTermandCondition">
+        <PropertyRef Name="QuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceAgreement_iffsCustomer">
+    <End Role="iffsCustomer" Type="Self.iffsCustomer" Multiplicity="1" />
+    <End Role="iffsServiceAgreement" Type="Self.iffsServiceAgreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceAgreement">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceAgreement_iffsQuotationHeader">
+    <End Role="iffsQuotationHeader" Type="Self.iffsQuotationHeader" Multiplicity="0..1" />
+    <End Role="iffsServiceAgreement" Type="Self.iffsServiceAgreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsQuotationHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceAgreement">
+        <PropertyRef Name="QuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRate_iffsLupCurrency">
+    <End Role="iffsLupCurrency" Type="Self.iffsLupCurrency" Multiplicity="1" />
+    <End Role="iffsServiceRate" Type="Self.iffsServiceRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCurrency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRate">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRate_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="0..1" />
+    <End Role="iffsServiceRate" Type="Self.iffsServiceRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRate">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRate_iffsLupServiceUnitType">
+    <End Role="iffsLupServiceUnitType" Type="Self.iffsLupServiceUnitType" Multiplicity="1" />
+    <End Role="iffsServiceRate" Type="Self.iffsServiceRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupServiceUnitType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRate">
+        <PropertyRef Name="ServiceUnitTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRate_iffsService">
+    <End Role="iffsService" Type="Self.iffsService" Multiplicity="1" />
+    <End Role="iffsServiceRate" Type="Self.iffsServiceRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsService">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRate">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequest_hrmsEmployee">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="1" />
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequest">
+        <PropertyRef Name="PreparedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequest_hrmsEmployee1">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequest">
+        <PropertyRef Name="CheckedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequest_hrmsEmployee2">
+    <End Role="hrmsEmployee" Type="Self.hrmsEmployee" Multiplicity="0..1" />
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hrmsEmployee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequest">
+        <PropertyRef Name="ApprovedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequest_iffsCustomer">
+    <End Role="iffsCustomer" Type="Self.iffsCustomer" Multiplicity="1" />
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequest">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequest_iffsServiceAgreement">
+    <End Role="iffsServiceAgreement" Type="Self.iffsServiceAgreement" Multiplicity="0..1" />
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsServiceAgreement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequest">
+        <PropertyRef Name="ServiceAgreementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequestDetail_iffsLupCommodityType">
+    <End Role="iffsLupCommodityType" Type="Self.iffsLupCommodityType" Multiplicity="0..1" />
+    <End Role="iffsServiceRequestDetail" Type="Self.iffsServiceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupCommodityType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequestDetail">
+        <PropertyRef Name="CommodityTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequestDetail_iffsLupContainerType">
+    <End Role="iffsLupContainerType" Type="Self.iffsLupContainerType" Multiplicity="0..1" />
+    <End Role="iffsServiceRequestDetail" Type="Self.iffsServiceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupContainerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequestDetail">
+        <PropertyRef Name="ContainerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequestDetail_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsServiceRequestDetail" Type="Self.iffsServiceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequestDetail">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequestDetail_iffsServiceRequest">
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="1" />
+    <End Role="iffsServiceRequestDetail" Type="Self.iffsServiceRequestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsServiceRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequestDetail">
+        <PropertyRef Name="HeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsServiceRequestDocuments_iffsServiceRequest">
+    <End Role="iffsServiceRequest" Type="Self.iffsServiceRequest" Multiplicity="1" />
+    <End Role="iffsServiceRequestDocuments" Type="Self.iffsServiceRequestDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsServiceRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsServiceRequestDocuments">
+        <PropertyRef Name="RequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsUserOperationTypeMapping_coreUser">
+    <End Role="coreUser" Type="Self.coreUser" Multiplicity="1" />
+    <End Role="iffsUserOperationTypeMapping" Type="Self.iffsUserOperationTypeMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsUserOperationTypeMapping">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_iffsUserOperationTypeMapping_iffsLupOperationType">
+    <End Role="iffsLupOperationType" Type="Self.iffsLupOperationType" Multiplicity="1" />
+    <End Role="iffsUserOperationTypeMapping" Type="Self.iffsUserOperationTypeMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupOperationType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsUserOperationTypeMapping">
+        <PropertyRef Name="OperationTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ifmsJobOrderStatus_ifmsOperationStatusTemplate">
+    <End Role="iffsOperationStatusTemplate" Type="Self.iffsOperationStatusTemplate" Multiplicity="1" />
+    <End Role="iffsOperationStatus" Type="Self.iffsOperationStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsOperationStatusTemplate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationStatus">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ifmsOperationStatusTemplate_coreRole">
+    <End Role="coreRole" Type="Self.coreRole" Multiplicity="1" />
+    <End Role="iffsOperationStatusTemplate" Type="Self.iffsOperationStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationStatusTemplate">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ifmsOperationStatusTemplate_ifmsLupDataType">
+    <End Role="iffsLupDataType" Type="Self.iffsLupDataType" Multiplicity="1" />
+    <End Role="iffsOperationStatusTemplate" Type="Self.iffsOperationStatusTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iffsLupDataType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsOperationStatusTemplate">
+        <PropertyRef Name="DataTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ifmsRoleSetting_coreRole">
+    <End Role="coreRole" Type="Self.coreRole" Multiplicity="1" />
+    <End Role="iffsRoleSetting" Type="Self.iffsRoleSetting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="coreRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="iffsRoleSetting">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ErpModelStoreContainer">
+    <EntitySet Name="coreModule" EntityType="Self.coreModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreOperation" EntityType="Self.coreOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="corePerson" EntityType="Self.corePerson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="corePosition" EntityType="Self.corePosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="corePositionClass" EntityType="Self.corePositionClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreRole" EntityType="Self.coreRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreRolePermission" EntityType="Self.coreRolePermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreSubsystem" EntityType="Self.coreSubsystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreUser" EntityType="Self.coreUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreUserRole" EntityType="Self.coreUserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coreUserSubsystem" EntityType="Self.coreUserSubsystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hrmsEmployee" EntityType="Self.hrmsEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsApprover" EntityType="Self.iffsApprover" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsContainer" EntityType="Self.iffsContainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsContainerStatus" EntityType="Self.iffsContainerStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsContainerStatusTemplate" EntityType="Self.iffsContainerStatusTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsCustomer" EntityType="Self.iffsCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsDocumentNoSetting" EntityType="Self.iffsDocumentNoSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsInvoiceDetail" EntityType="Self.iffsInvoiceDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsInvoiceHeader" EntityType="Self.iffsInvoiceHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsInvoiceOperation" EntityType="Self.iffsInvoiceOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderDetail" EntityType="Self.iffsJobOrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderDocument" EntityType="Self.iffsJobOrderDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderHeader" EntityType="Self.iffsJobOrderHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderHistoryDetail" EntityType="Self.iffsJobOrderHistoryDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderHistoryHeader" EntityType="Self.iffsJobOrderHistoryHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderQuotation" EntityType="Self.iffsJobOrderQuotation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsJobOrderTemplate" EntityType="Self.iffsJobOrderTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupCommodityType" EntityType="Self.iffsLupCommodityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupContainerType" EntityType="Self.iffsLupContainerType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupCurrency" EntityType="Self.iffsLupCurrency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupCustomerGroup" EntityType="Self.iffsLupCustomerGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupDataType" EntityType="Self.iffsLupDataType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupDocumentType" EntityType="Self.iffsLupDocumentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupExpenseType" EntityType="Self.iffsLupExpenseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupLoadingPort" EntityType="Self.iffsLupLoadingPort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupOperationOpeningLocation" EntityType="Self.iffsLupOperationOpeningLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupOperationType" EntityType="Self.iffsLupOperationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupPOE" EntityType="Self.iffsLupPOE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupPortOfDestination" EntityType="Self.iffsLupPortOfDestination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupPortOfOrigin" EntityType="Self.iffsLupPortOfOrigin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupServiceUnitType" EntityType="Self.iffsLupServiceUnitType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupSizeUnitType" EntityType="Self.iffsLupSizeUnitType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsLupWeightUnitType" EntityType="Self.iffsLupWeightUnitType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsNotification" EntityType="Self.iffsNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperation" EntityType="Self.iffsOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperationDocumentTemplate" EntityType="Self.iffsOperationDocumentTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperationExpense" EntityType="Self.iffsOperationExpense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperationExpenseTemplate" EntityType="Self.iffsOperationExpenseTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperationStatus" EntityType="Self.iffsOperationStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsOperationStatusTemplate" EntityType="Self.iffsOperationStatusTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsQuotationDetail" EntityType="Self.iffsQuotationDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsQuotationHeader" EntityType="Self.iffsQuotationHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsQuotationTemplate" EntityType="Self.iffsQuotationTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsQuotationTermandCondition" EntityType="Self.iffsQuotationTermandCondition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsRoleSetting" EntityType="Self.iffsRoleSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsService" EntityType="Self.iffsService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsServiceAgreement" EntityType="Self.iffsServiceAgreement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsServiceRate" EntityType="Self.iffsServiceRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsServiceRequest" EntityType="Self.iffsServiceRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsServiceRequestDetail" EntityType="Self.iffsServiceRequestDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsServiceRequestDocuments" EntityType="Self.iffsServiceRequestDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsTermsAndConditionsTemplate" EntityType="Self.iffsTermsAndConditionsTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iffsUserOperationTypeMapping" EntityType="Self.iffsUserOperationTypeMapping" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_coreModule_coreSubsystem" Association="Self.FK_coreModule_coreSubsystem">
+      <End Role="coreSubsystem" EntitySet="coreSubsystem" />
+      <End Role="coreModule" EntitySet="coreModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreOperation_coreModule" Association="Self.FK_coreOperation_coreModule">
+      <End Role="coreModule" EntitySet="coreModule" />
+      <End Role="coreOperation" EntitySet="coreOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_corePosition_corePositionClass" Association="Self.FK_corePosition_corePositionClass">
+      <End Role="corePositionClass" EntitySet="corePositionClass" />
+      <End Role="corePosition" EntitySet="corePosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreRolePermission_coreOperation" Association="Self.FK_coreRolePermission_coreOperation">
+      <End Role="coreOperation" EntitySet="coreOperation" />
+      <End Role="coreRolePermission" EntitySet="coreRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreRolePermission_coreRole" Association="Self.FK_coreRolePermission_coreRole">
+      <End Role="coreRole" EntitySet="coreRole" />
+      <End Role="coreRolePermission" EntitySet="coreRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreUserRole_coreRole" Association="Self.FK_coreUserRole_coreRole">
+      <End Role="coreRole" EntitySet="coreRole" />
+      <End Role="coreUserRole" EntitySet="coreUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreUserRole_coreUser" Association="Self.FK_coreUserRole_coreUser">
+      <End Role="coreUser" EntitySet="coreUser" />
+      <End Role="coreUserRole" EntitySet="coreUserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreUserSubsystem_coreSubsystem" Association="Self.FK_coreUserSubsystem_coreSubsystem">
+      <End Role="coreSubsystem" EntitySet="coreSubsystem" />
+      <End Role="coreUserSubsystem" EntitySet="coreUserSubsystem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_coreUserSubsystem_coreUser" Association="Self.FK_coreUserSubsystem_coreUser">
+      <End Role="coreUser" EntitySet="coreUser" />
+      <End Role="coreUserSubsystem" EntitySet="coreUserSubsystem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_hrmsEmployee_corePerson" Association="Self.FK_hrmsEmployee_corePerson">
+      <End Role="corePerson" EntitySet="corePerson" />
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_hrmsEmployee_corePosition" Association="Self.FK_hrmsEmployee_corePosition">
+      <End Role="corePosition" EntitySet="corePosition" />
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsApprover_hrmsEmployee" Association="Self.FK_iffsApprover_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsApprover" EntitySet="iffsApprover" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainer_iffsLupContainerType" Association="Self.FK_iffsContainer_iffsLupContainerType">
+      <End Role="iffsLupContainerType" EntitySet="iffsLupContainerType" />
+      <End Role="iffsContainer" EntitySet="iffsContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainer_iffsLupCurrency" Association="Self.FK_iffsContainer_iffsLupCurrency">
+      <End Role="iffsLupCurrency" EntitySet="iffsLupCurrency" />
+      <End Role="iffsContainer" EntitySet="iffsContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainer_iffsOperation" Association="Self.FK_iffsContainer_iffsOperation">
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+      <End Role="iffsContainer" EntitySet="iffsContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainerStatus_iffsContainer" Association="Self.FK_iffsContainerStatus_iffsContainer">
+      <End Role="iffsContainer" EntitySet="iffsContainer" />
+      <End Role="iffsContainerStatus" EntitySet="iffsContainerStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainerStatus_iffsContainerStatusTemplate" Association="Self.FK_iffsContainerStatus_iffsContainerStatusTemplate">
+      <End Role="iffsContainerStatusTemplate" EntitySet="iffsContainerStatusTemplate" />
+      <End Role="iffsContainerStatus" EntitySet="iffsContainerStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainerStatusTemplate_coreRole" Association="Self.FK_iffsContainerStatusTemplate_coreRole">
+      <End Role="coreRole" EntitySet="coreRole" />
+      <End Role="iffsContainerStatusTemplate" EntitySet="iffsContainerStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainerStatusTemplate_iffsLupDataType" Association="Self.FK_iffsContainerStatusTemplate_iffsLupDataType">
+      <End Role="iffsLupDataType" EntitySet="iffsLupDataType" />
+      <End Role="iffsContainerStatusTemplate" EntitySet="iffsContainerStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsContainerStatusTemplate_iffsLupOperationType" Association="Self.FK_iffsContainerStatusTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsContainerStatusTemplate" EntitySet="iffsContainerStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsCustomer_iffsLupCustomerGroup" Association="Self.FK_iffsCustomer_iffsLupCustomerGroup">
+      <End Role="iffsLupCustomerGroup" EntitySet="iffsLupCustomerGroup" />
+      <End Role="iffsCustomer" EntitySet="iffsCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceDetail_iffsInvoiceHeader" Association="Self.FK_iffsInvoiceDetail_iffsInvoiceHeader">
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+      <End Role="iffsInvoiceDetail" EntitySet="iffsInvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceDetail_iffsLupCurrency" Association="Self.FK_iffsInvoiceDetail_iffsLupCurrency">
+      <End Role="iffsLupCurrency" EntitySet="iffsLupCurrency" />
+      <End Role="iffsInvoiceDetail" EntitySet="iffsInvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceDetail_iffsLupServiceUnitType" Association="Self.FK_iffsInvoiceDetail_iffsLupServiceUnitType">
+      <End Role="iffsLupServiceUnitType" EntitySet="iffsLupServiceUnitType" />
+      <End Role="iffsInvoiceDetail" EntitySet="iffsInvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceDetail_iffsService" Association="Self.FK_iffsInvoiceDetail_iffsService">
+      <End Role="iffsService" EntitySet="iffsService" />
+      <End Role="iffsInvoiceDetail" EntitySet="iffsInvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceHeader_hrmsEmployee" Association="Self.FK_iffsInvoiceHeader_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceHeader_hrmsEmployee1" Association="Self.FK_iffsInvoiceHeader_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceHeader_hrmsEmployee2" Association="Self.FK_iffsInvoiceHeader_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceHeader_iffsCustomer" Association="Self.FK_iffsInvoiceHeader_iffsCustomer">
+      <End Role="iffsCustomer" EntitySet="iffsCustomer" />
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceHeader_iffsInvoiceHeader1" Association="Self.FK_iffsInvoiceHeader_iffsInvoiceHeader1">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceOperation_iffsInvoiceHeader" Association="Self.FK_iffsInvoiceOperation_iffsInvoiceHeader">
+      <End Role="iffsInvoiceHeader" EntitySet="iffsInvoiceHeader" />
+      <End Role="iffsInvoiceOperation" EntitySet="iffsInvoiceOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsInvoiceOperation_iffsOperation" Association="Self.FK_iffsInvoiceOperation_iffsOperation">
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+      <End Role="iffsInvoiceOperation" EntitySet="iffsInvoiceOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderDetail_iffsJobOrderHeader" Association="Self.FK_iffsJobOrderDetail_iffsJobOrderHeader">
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+      <End Role="iffsJobOrderDetail" EntitySet="iffsJobOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderDocument_iffsJobOrderHeader" Association="Self.FK_iffsJobOrderDocument_iffsJobOrderHeader">
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+      <End Role="iffsJobOrderDocument" EntitySet="iffsJobOrderDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderDocument_iffsLupDocumentType" Association="Self.FK_iffsJobOrderDocument_iffsLupDocumentType">
+      <End Role="iffsLupDocumentType" EntitySet="iffsLupDocumentType" />
+      <End Role="iffsJobOrderDocument" EntitySet="iffsJobOrderDocument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderExpense_iffsLupCurrency" Association="Self.FK_iffsJobOrderExpense_iffsLupCurrency">
+      <End Role="iffsLupCurrency" EntitySet="iffsLupCurrency" />
+      <End Role="iffsOperationExpense" EntitySet="iffsOperationExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderExpense_iffsLupExpenseType" Association="Self.FK_iffsJobOrderExpense_iffsLupExpenseType">
+      <End Role="iffsLupExpenseType" EntitySet="iffsLupExpenseType" />
+      <End Role="iffsOperationExpense" EntitySet="iffsOperationExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHeader_hrmsEmployee" Association="Self.FK_iffsJobOrderHeader_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHeader_hrmsEmployee1" Association="Self.FK_iffsJobOrderHeader_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHeader_hrmsEmployee2" Association="Self.FK_iffsJobOrderHeader_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHeader_iffsLupOperationType" Association="Self.FK_iffsJobOrderHeader_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHistoryDetail_iffsJobOrderHistoryHeader" Association="Self.FK_iffsJobOrderHistoryDetail_iffsJobOrderHistoryHeader">
+      <End Role="iffsJobOrderHistoryHeader" EntitySet="iffsJobOrderHistoryHeader" />
+      <End Role="iffsJobOrderHistoryDetail" EntitySet="iffsJobOrderHistoryDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee" Association="Self.FK_iffsJobOrderHistoryHeader_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHistoryHeader" EntitySet="iffsJobOrderHistoryHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee1" Association="Self.FK_iffsJobOrderHistoryHeader_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHistoryHeader" EntitySet="iffsJobOrderHistoryHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHistoryHeader_hrmsEmployee2" Association="Self.FK_iffsJobOrderHistoryHeader_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsJobOrderHistoryHeader" EntitySet="iffsJobOrderHistoryHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderHistoryHeader_iffsLupOperationType" Association="Self.FK_iffsJobOrderHistoryHeader_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsJobOrderHistoryHeader" EntitySet="iffsJobOrderHistoryHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderQuotation_iffsJobOrderHeader" Association="Self.FK_iffsJobOrderQuotation_iffsJobOrderHeader">
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+      <End Role="iffsJobOrderQuotation" EntitySet="iffsJobOrderQuotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderQuotation_iffsQuotationHeader" Association="Self.FK_iffsJobOrderQuotation_iffsQuotationHeader">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsJobOrderQuotation" EntitySet="iffsJobOrderQuotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsJobOrderTemplate_iffsLupOperationType" Association="Self.FK_iffsJobOrderTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsJobOrderTemplate" EntitySet="iffsJobOrderTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee" Association="Self.FK_iffsOperation_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee1" Association="Self.FK_iffsOperation_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee2" Association="Self.FK_iffsOperation_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee3" Association="Self.FK_iffsOperation_hrmsEmployee3">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee4" Association="Self.FK_iffsOperation_hrmsEmployee4">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee5" Association="Self.FK_iffsOperation_hrmsEmployee5">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee6" Association="Self.FK_iffsOperation_hrmsEmployee6">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_hrmsEmployee7" Association="Self.FK_iffsOperation_hrmsEmployee7">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_iffsJobOrderHeader" Association="Self.FK_iffsOperation_iffsJobOrderHeader">
+      <End Role="iffsJobOrderHeader" EntitySet="iffsJobOrderHeader" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_iffsLupLoadingPort" Association="Self.FK_iffsOperation_iffsLupLoadingPort">
+      <End Role="iffsLupLoadingPort" EntitySet="iffsLupLoadingPort" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_iffsLupOperationOpeningLocation" Association="Self.FK_iffsOperation_iffsLupOperationOpeningLocation">
+      <End Role="iffsLupOperationOpeningLocation" EntitySet="iffsLupOperationOpeningLocation" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_iffsLupPortOfDestination" Association="Self.FK_iffsOperation_iffsLupPortOfDestination">
+      <End Role="iffsLupPortOfDestination" EntitySet="iffsLupPortOfDestination" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperation_iffsLupPortOfOrigin" Association="Self.FK_iffsOperation_iffsLupPortOfOrigin">
+      <End Role="iffsLupPortOfOrigin" EntitySet="iffsLupPortOfOrigin" />
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationDocumentTemplate_iffsLupDocumentType" Association="Self.FK_iffsOperationDocumentTemplate_iffsLupDocumentType">
+      <End Role="iffsLupDocumentType" EntitySet="iffsLupDocumentType" />
+      <End Role="iffsOperationDocumentTemplate" EntitySet="iffsOperationDocumentTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationDocumentTemplate_iffsLupOperationType" Association="Self.FK_iffsOperationDocumentTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsOperationDocumentTemplate" EntitySet="iffsOperationDocumentTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationExpense_iffsOperation" Association="Self.FK_iffsOperationExpense_iffsOperation">
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+      <End Role="iffsOperationExpense" EntitySet="iffsOperationExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationExpenseTemplate_iffsLupExpenseType" Association="Self.FK_iffsOperationExpenseTemplate_iffsLupExpenseType">
+      <End Role="iffsLupExpenseType" EntitySet="iffsLupExpenseType" />
+      <End Role="iffsOperationExpenseTemplate" EntitySet="iffsOperationExpenseTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationExpenseTemplate_iffsLupOperationType" Association="Self.FK_iffsOperationExpenseTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsOperationExpenseTemplate" EntitySet="iffsOperationExpenseTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationStatus_iffsOperation" Association="Self.FK_iffsOperationStatus_iffsOperation">
+      <End Role="iffsOperation" EntitySet="iffsOperation" />
+      <End Role="iffsOperationStatus" EntitySet="iffsOperationStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsOperationStatusTemplate_iffsLupOperationType" Association="Self.FK_iffsOperationStatusTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsOperationStatusTemplate" EntitySet="iffsOperationStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsLupCurrency" Association="Self.FK_iffsQuotationDetail_iffsLupCurrency">
+      <End Role="iffsLupCurrency" EntitySet="iffsLupCurrency" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsLupOperationType" Association="Self.FK_iffsQuotationDetail_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsLupServiceUnitType" Association="Self.FK_iffsQuotationDetail_iffsLupServiceUnitType">
+      <End Role="iffsLupServiceUnitType" EntitySet="iffsLupServiceUnitType" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsQuotationHeader" Association="Self.FK_iffsQuotationDetail_iffsQuotationHeader">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsService" Association="Self.FK_iffsQuotationDetail_iffsService">
+      <End Role="iffsService" EntitySet="iffsService" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationDetail_iffsServiceRequestDetail" Association="Self.FK_iffsQuotationDetail_iffsServiceRequestDetail">
+      <End Role="iffsServiceRequestDetail" EntitySet="iffsServiceRequestDetail" />
+      <End Role="iffsQuotationDetail" EntitySet="iffsQuotationDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_hrmsEmployee" Association="Self.FK_iffsQuotationHeader_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_hrmsEmployee1" Association="Self.FK_iffsQuotationHeader_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_hrmsEmployee2" Association="Self.FK_iffsQuotationHeader_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_iffsQuotationHeader" Association="Self.FK_iffsQuotationHeader_iffsQuotationHeader">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsQuotationHeader1" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_iffsQuotationHeader1" Association="Self.FK_iffsQuotationHeader_iffsQuotationHeader1">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsQuotationHeader1" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationHeader_iffsServiceRequest" Association="Self.FK_iffsQuotationHeader_iffsServiceRequest">
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationTemplate_iffsLupOperationType" Association="Self.FK_iffsQuotationTemplate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsQuotationTemplate" EntitySet="iffsQuotationTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationTemplate_iffsService" Association="Self.FK_iffsQuotationTemplate_iffsService">
+      <End Role="iffsService" EntitySet="iffsService" />
+      <End Role="iffsQuotationTemplate" EntitySet="iffsQuotationTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsQuotationTermandCondition_iffsQuotationHeader" Association="Self.FK_iffsQuotationTermandCondition_iffsQuotationHeader">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsQuotationTermandCondition" EntitySet="iffsQuotationTermandCondition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceAgreement_iffsCustomer" Association="Self.FK_iffsServiceAgreement_iffsCustomer">
+      <End Role="iffsCustomer" EntitySet="iffsCustomer" />
+      <End Role="iffsServiceAgreement" EntitySet="iffsServiceAgreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceAgreement_iffsQuotationHeader" Association="Self.FK_iffsServiceAgreement_iffsQuotationHeader">
+      <End Role="iffsQuotationHeader" EntitySet="iffsQuotationHeader" />
+      <End Role="iffsServiceAgreement" EntitySet="iffsServiceAgreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRate_iffsLupCurrency" Association="Self.FK_iffsServiceRate_iffsLupCurrency">
+      <End Role="iffsLupCurrency" EntitySet="iffsLupCurrency" />
+      <End Role="iffsServiceRate" EntitySet="iffsServiceRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRate_iffsLupOperationType" Association="Self.FK_iffsServiceRate_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsServiceRate" EntitySet="iffsServiceRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRate_iffsLupServiceUnitType" Association="Self.FK_iffsServiceRate_iffsLupServiceUnitType">
+      <End Role="iffsLupServiceUnitType" EntitySet="iffsLupServiceUnitType" />
+      <End Role="iffsServiceRate" EntitySet="iffsServiceRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRate_iffsService" Association="Self.FK_iffsServiceRate_iffsService">
+      <End Role="iffsService" EntitySet="iffsService" />
+      <End Role="iffsServiceRate" EntitySet="iffsServiceRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequest_hrmsEmployee" Association="Self.FK_iffsServiceRequest_hrmsEmployee">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequest_hrmsEmployee1" Association="Self.FK_iffsServiceRequest_hrmsEmployee1">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequest_hrmsEmployee2" Association="Self.FK_iffsServiceRequest_hrmsEmployee2">
+      <End Role="hrmsEmployee" EntitySet="hrmsEmployee" />
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequest_iffsCustomer" Association="Self.FK_iffsServiceRequest_iffsCustomer">
+      <End Role="iffsCustomer" EntitySet="iffsCustomer" />
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequest_iffsServiceAgreement" Association="Self.FK_iffsServiceRequest_iffsServiceAgreement">
+      <End Role="iffsServiceAgreement" EntitySet="iffsServiceAgreement" />
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequestDetail_iffsLupCommodityType" Association="Self.FK_iffsServiceRequestDetail_iffsLupCommodityType">
+      <End Role="iffsLupCommodityType" EntitySet="iffsLupCommodityType" />
+      <End Role="iffsServiceRequestDetail" EntitySet="iffsServiceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequestDetail_iffsLupContainerType" Association="Self.FK_iffsServiceRequestDetail_iffsLupContainerType">
+      <End Role="iffsLupContainerType" EntitySet="iffsLupContainerType" />
+      <End Role="iffsServiceRequestDetail" EntitySet="iffsServiceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequestDetail_iffsLupOperationType" Association="Self.FK_iffsServiceRequestDetail_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsServiceRequestDetail" EntitySet="iffsServiceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequestDetail_iffsServiceRequest" Association="Self.FK_iffsServiceRequestDetail_iffsServiceRequest">
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+      <End Role="iffsServiceRequestDetail" EntitySet="iffsServiceRequestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsServiceRequestDocuments_iffsServiceRequest" Association="Self.FK_iffsServiceRequestDocuments_iffsServiceRequest">
+      <End Role="iffsServiceRequest" EntitySet="iffsServiceRequest" />
+      <End Role="iffsServiceRequestDocuments" EntitySet="iffsServiceRequestDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsUserOperationTypeMapping_coreUser" Association="Self.FK_iffsUserOperationTypeMapping_coreUser">
+      <End Role="coreUser" EntitySet="coreUser" />
+      <End Role="iffsUserOperationTypeMapping" EntitySet="iffsUserOperationTypeMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_iffsUserOperationTypeMapping_iffsLupOperationType" Association="Self.FK_iffsUserOperationTypeMapping_iffsLupOperationType">
+      <End Role="iffsLupOperationType" EntitySet="iffsLupOperationType" />
+      <End Role="iffsUserOperationTypeMapping" EntitySet="iffsUserOperationTypeMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ifmsJobOrderStatus_ifmsOperationStatusTemplate" Association="Self.FK_ifmsJobOrderStatus_ifmsOperationStatusTemplate">
+      <End Role="iffsOperationStatusTemplate" EntitySet="iffsOperationStatusTemplate" />
+      <End Role="iffsOperationStatus" EntitySet="iffsOperationStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ifmsOperationStatusTemplate_coreRole" Association="Self.FK_ifmsOperationStatusTemplate_coreRole">
+      <End Role="coreRole" EntitySet="coreRole" />
+      <End Role="iffsOperationStatusTemplate" EntitySet="iffsOperationStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ifmsOperationStatusTemplate_ifmsLupDataType" Association="Self.FK_ifmsOperationStatusTemplate_ifmsLupDataType">
+      <End Role="iffsLupDataType" EntitySet="iffsLupDataType" />
+      <End Role="iffsOperationStatusTemplate" EntitySet="iffsOperationStatusTemplate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ifmsRoleSetting_coreRole" Association="Self.FK_ifmsRoleSetting_coreRole">
+      <End Role="coreRole" EntitySet="coreRole" />
+      <End Role="iffsRoleSetting" EntitySet="iffsRoleSetting" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

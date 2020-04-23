@@ -1,0 +1,215 @@
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll.config
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.pdb
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\Ext.Direct.Mvc.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.pdb
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.pdb
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.pdb
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.csprojResolveAssemblyReference.cache
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.pdb
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.dll
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.xml
+D:\TFS\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll.config
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Ext.Direct.Mvc.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.pdb
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.xml
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.csprojResolveAssemblyReference.cache
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.dll
+D:\Wonde's File\My Workspace\TFS Projects\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll.config
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Ext.Direct.Mvc.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Infrastructure.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.pdb
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.xml
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.csprojResolveAssemblyReference.cache
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.dll
+F:\Meftuh Project\PAG\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll.config
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Ext.Direct.Mvc.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.pdb
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.xml
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.csprojResolveAssemblyReference.cache
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.dll
+E:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll.config
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Presentation.Iffs.Web.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Ext.Direct.Mvc.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Business.Component.Iffs.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Infrastructure.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\CyberErp.Data.Model.pdb
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\EntityFramework.SqlServer.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\Newtonsoft.Json.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.Formatting.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Net.Http.WebRequest.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Helpers.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Http.WebHost.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Mvc.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.Razor.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Deployment.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\bin\System.Web.WebPages.Razor.xml
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.csprojResolveAssemblyReference.cache
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.dll
+D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Presentation.Iffs.Web\obj\Debug\CyberErp.Presentation.Iffs.Web.pdb

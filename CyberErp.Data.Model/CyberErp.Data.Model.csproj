@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73F4BC32-7EB4-40F1-8A1E-BC500E663813}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CyberErp.Data.Model</RootNamespace>
+    <AssemblyName>CyberErp.Data.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="coreModule.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreOperation.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="corePerson.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="corePosition.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="corePositionClass.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreRole.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreRolePermission.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreSubsystem.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreUser.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreUserRole.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coreUserSubsystem.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Erp.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Erp.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Erp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Erp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Erp.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ErpEntities.partial.cs" />
+    <Compile Include="hrmsEmployee.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsApprover.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsContainer.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsContainerStatus.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsContainerStatusTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsCrateAndBoxRequestDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsCrateAndBoxRequestHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsCustomer.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsDocumentNoSetting.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsInvoiceDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsInvoiceHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsInvoiceOperation.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderDocument.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderHistoryDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderHistoryHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderQuotation.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsJobOrderTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupBoxType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupClientStatus.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupCommodityType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupContainerType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupCurrency.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupCustomerGroup.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupDamageType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupDataType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupDocumentType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupExpenseType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupLoadingPort.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupOperationOpeningLocation.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupOperationType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupPOE.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupPortOfDestination.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupPortOfOrigin.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupRoomType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupServiceUnitType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupSizeUnitType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupTruckType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsLupWeightUnitType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsNotification.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperation.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperationDocumentTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperationExpense.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperationExpenseTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperationStatus.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsOperationStatusTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingCrateAndBoxConsumption.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingDamageReportDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingDamageReportHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingList.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingListSetting.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingMaterial.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingMaterialConsumption.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingMaterialDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingMaterialHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingMaterialList.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingStaff.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingSurveyDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingSurveyHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsPackingTruckAndMachine.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsQuotationDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsQuotationHeader.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsQuotationTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsQuotationTermandCondition.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsReceivingClient.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsRoleSetting.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsSchedule.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsService.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsServiceAgreement.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsServiceRate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsServiceRequest.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsServiceRequestDetail.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsServiceRequestDocuments.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsShipmentType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsSurveyRequest.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsSurveyServiceRequest.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsTermsAndConditionsTemplate.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iffsUserOperationTypeMapping.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ifmsSetting.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lupMeasurementUnit.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialType.cs">
+      <DependentUpon>Erp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Erp.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Erp.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Erp.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Erp.edmx</DependentUpon>
+      <LastGenOutput>Erp.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Erp.edmx.diagram">
+      <DependentUpon>Erp.edmx</DependentUpon>
+    </None>
+    <None Include="Erp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Erp.edmx</DependentUpon>
+      <LastGenOutput>Erp.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
