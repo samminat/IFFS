@@ -56,3 +56,13 @@ D:\GitHub\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.
 D:\GitHub\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
 D:\GitHub\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
 D:\GitHub\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll.config
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.dll
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\CyberErp.Data.Infrastructure.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.dll
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.xml
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.csprojResolveAssemblyReference.cache
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.dll
+E:\GitHub-Projects\IFFS\CyberErp.Data.Infrastructure\obj\Debug\CyberErp.Data.Infrastructure.pdb

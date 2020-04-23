@@ -68,3 +68,17 @@ D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\Ent
 D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.csprojResolveAssemblyReference.cache
 D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.dll
 D:\WorkSpace\PAG\IFFS_Merged\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Business.Component.Iffs.dll.config
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Business.Component.Iffs.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Business.Component.Iffs.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Data.Infrastructure.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Data.Model.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\EntityFramework.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Data.Infrastructure.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\CyberErp.Data.Model.pdb
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\EntityFramework.xml
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.csprojResolveAssemblyReference.cache
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.dll
+E:\GitHub-Projects\IFFS\CyberErp.Business.Component.Iffs\obj\Debug\CyberErp.Business.Component.Iffs.pdb
